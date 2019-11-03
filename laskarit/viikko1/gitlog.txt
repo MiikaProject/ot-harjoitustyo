@@ -38,6 +38,7 @@ Date:   Sun Nov 3 13:00:39 2019 -0500
  tiedosto.txt => eka.txt | 0
  1 file changed, 0 insertions(+), 0 deletions(-)
 
+MERGE
 commit c2807eba0455162d003058ff13d8b42564ea236f
 Author: Miika <miika37@hotmail.com>
 Date:   Sun Nov 3 13:00:00 2019 -0500

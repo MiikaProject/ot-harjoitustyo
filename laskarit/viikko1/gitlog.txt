@@ -1,0 +1,96 @@
+commit 042de9a2e99c5a3f8500537d9c983a44211a98ae
+Author: Miika <miika37@hotmail.com>
+Date:   Sun Nov 3 13:14:19 2019 -0500
+
+    treeni
+
+ tiedostoja/file22.txt | 0
+ tiedostoja/file3.txt  | 1 +
+ 2 files changed, 1 insertion(+)
+
+commit 094c47c02f8cbde9e41eaa34ae5cfdf6d872b8b8
+Author: Miika <miika37@hotmail.com>
+Date:   Sun Nov 3 13:11:20 2019 -0500
+
+    tiedostoja
+
+ file1.txt | 0
+ file2.txt | 0
+ file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit fe33e3058b5ad6a2155b20b5a691d438cb6b1724
+Author: Miika <miika37@hotmail.com>
+Date:   Sun Nov 3 13:03:03 2019 -0500
+
+    gitp
+
+ eka.txt    | 1 +
+ kolmas.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit f19c02d051af0edc71055a7ea3109a2e8669e872
+Author: Miika <miika37@hotmail.com>
+Date:   Sun Nov 3 13:00:39 2019 -0500
+
+    vaihtonimi
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit c2807eba0455162d003058ff13d8b42564ea236f
+Author: Miika <miika37@hotmail.com>
+Date:   Sun Nov 3 13:00:00 2019 -0500
+
+    poisto
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 2c773e6279976d236f4605f9fc76eb515504d0b6
+Author: Miika <miika37@hotmail.com>
+Date:   Sun Nov 3 12:56:19 2019 -0500
+
+    pieni tiedosto
+
+ tiedosto.txt | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+commit 02f42ad767710ea4f8c016588c172d03b04ae0bb
+Author: Miika <miika37@hotmail.com>
+Date:   Sun Nov 3 12:55:42 2019 -0500
+
+    iso tiedosto
+
+ tiedosto.txt | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+commit 9b910aae2ccb5dc7c1af8000b8518e3916e56c13
+Author: Miika <miika37@hotmail.com>
+Date:   Sun Nov 3 12:53:25 2019 -0500
+
+    kommit
+
+ kolmas.txt     | 1 +
+ stuff/uusi.txt | 1 +
+ toinen.txt     | 1 +
+ 3 files changed, 3 insertions(+)
+
+commit 6afbdf297e80af797eb33bb99e8989e0e2a83887
+Author: Miika <miika37@hotmail.com>
+Date:   Sun Nov 3 12:07:44 2019 -0500
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit c65385c63142aeec4576548fc8efa13b4f41e564
+Author: Miika <miika37@hotmail.com>
+Date:   Sun Nov 3 11:53:29 2019 -0500
+
+    tiedosto.txt luoto
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)

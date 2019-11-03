@@ -1,0 +1,27 @@
+.
+├── Desktop -> /home/ad/home/m/miikaroi/Desktop
+├── Documents -> /home/ad/home/m/miikaroi/Documents
+├── Downloads -> /home/ad/home/m/miikaroi/Downloads
+└── kurssit
+    └── ot2019
+        └── viikko1
+            └── Unicafe
+                ├── pom.xml
+                └── src
+                    ├── main
+                    │   └── java
+                    │       └── com
+                    │           └── mycompany
+                    │               └── unicafe
+                    │                   ├── Kassapaate.java
+                    │                   ├── Maksukortti.java
+                    │                   └── Paaohjelma.java
+                    └── test
+                        └── java
+                            └── com
+                                └── mycompany
+                                    └── unicafe
+                                        └── MaksukorttiTest.java
+
+18 directories, 5 files
+

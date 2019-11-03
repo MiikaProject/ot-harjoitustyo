@@ -1,3 +1,8 @@
 #  Ohjelmistotekniikka 2019 syksy
 
-* Tämä* ** toimii**  ohjelmistotekniikan kurssin git repona.
+## Tehtävät
+
+### Viikko 1
+
+[gitlob.txt](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+[komentorivi.txt](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)

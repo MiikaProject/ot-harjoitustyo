@@ -5,6 +5,6 @@ Ohjelman tarkoituksena on muodostaa peli, jossa pelaajan tulee ohjata hahmoa kau
 
 
 ## Dokumentaatio
-* [Vaatimusmääritely](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
+* [Vaatimusmäärittely](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 * [Tuntikirjanpito](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 

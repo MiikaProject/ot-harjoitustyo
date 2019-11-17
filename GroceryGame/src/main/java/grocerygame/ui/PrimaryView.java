@@ -22,11 +22,13 @@ import javafx.stage.Stage;
  * @author miika1
  */
 public class PrimaryView {
+    private Scene view;
+
+    
+    
+    
 
     public PrimaryView() {
-    }
-    
-    public Scene getView(){
         Label settingsTitle = new Label("Settings");
         Label user = new Label("Enter name");
         TextField userfield = new TextField();
@@ -99,7 +101,11 @@ public class PrimaryView {
         grid.setSpacing(15);
 
         //Build the scene and display it
-        Scene view = new Scene(grid);
+        view = new Scene(grid);
+    }
+    
+    public Scene getView(){
+        
         
         return view;
     }

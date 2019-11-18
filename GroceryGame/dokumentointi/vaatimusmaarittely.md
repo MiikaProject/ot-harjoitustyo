@@ -14,10 +14,10 @@ Sovellus on peli, jossa pelaaja liikuttaa kaupassa hahmoa keräten ostoslistalla
 
 ## Käyttöliittymäluonnos
 ### Etusivu
-![kuva etusivusta](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/dokumentointi/kuvat/etusivu.png)
+![kuva etusivusta](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/kuvat/etusivu.png)
 
 ### Peli
-![kuva pelistä](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/dokumentointi/kuvat/peli.png)
+![kuva pelistä](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/kuvat/peli.png)
 
 
 ## Jatkokehitysideoita

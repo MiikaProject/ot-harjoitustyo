@@ -5,6 +5,22 @@ Ohjelman tarkoituksena on muodostaa peli, jossa pelaajan tulee ohjata hahmoa kau
 
 
 ## Dokumentaatio
-* [Vaatimusmäärittely](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
-* [Tuntikirjanpito](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
+* [Vaatimusmäärittely](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/vaatimusmaarittely.md)
+* [Tuntikirjanpito](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/tuntikirjanpito.md)
 
+## Komentorivi komennot
+Ennen komentorivien suorittamista tulee siirtyä Maven-projektin juureen eli ot-harjoitustyo/Grocerygame
+
+### Testaus
+yleinen testaus
+```
+mvn test
+```
+testaus kattavuus raportti
+```
+mvn test jacoco:report
+```
+### Ohjelman käynnistys 
+```
+mvn compile exec:java -Dexec.mainClass=grocerygame.Main
+```

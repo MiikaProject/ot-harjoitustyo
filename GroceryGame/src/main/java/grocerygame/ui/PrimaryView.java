@@ -101,7 +101,7 @@ public class PrimaryView {
         grid.setSpacing(15);
 
         //Build the scene and display it
-        view = new Scene(grid);
+        view = new Scene(grid,400,400);
     }
     
     public Scene getView(){

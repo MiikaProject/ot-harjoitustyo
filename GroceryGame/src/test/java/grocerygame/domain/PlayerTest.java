@@ -69,4 +69,31 @@ public class PlayerTest {
         
     }
     
+    @Test
+    public void negativeScoreNotAllowed(){
+        boolean response = player.setScore(-50);
+        
+        assertEquals(false, response);
+        
+    }
+    
+    @Test
+    public void positiveScoreWorks(){
+        boolean response = player.setScore(50);
+        assertEquals(true, response);
+    }
+    
+    
+    @Test
+    public void returnPositiveScoreCorrectly(){
+        player.setScore(50);
+        assertEquals(50, player.getScore());
+    }
+    
+    @Test
+    public void negativeSetScoreDoesNotChangeScore(){
+        player.setScore(-50);
+        assertEquals(0, player.getScore());
+    }
+    
 }

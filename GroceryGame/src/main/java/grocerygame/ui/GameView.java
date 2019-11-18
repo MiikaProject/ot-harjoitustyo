@@ -20,14 +20,11 @@ public class GameView {
 
     private String player;
     private int difficulty;
+    private Scene game;
 
     public GameView(String player, int difficulty) {
         this.player = player;
         this.difficulty = difficulty;
-    }
-    
-    //method to build the view and return it
-    public Scene getView(){
         
         BorderPane layout = new BorderPane();
         Button quit = new Button("Quit");
@@ -36,7 +33,13 @@ public class GameView {
         }));
         layout.setRight(quit);
         layout.setCenter(new Label("Game not implemented yet!"));
-        Scene game = new Scene(layout,200,200);
+        game = new Scene(layout,400,400);
+    }
+    
+    //method to build the view and return it
+    public Scene getView(){
+        
+        
         
         return game;
     }

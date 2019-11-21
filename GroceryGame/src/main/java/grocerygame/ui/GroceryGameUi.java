@@ -5,6 +5,7 @@
  */
 package grocerygame.ui;
         
+import grocerygame.game.GameView;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -16,7 +17,8 @@ public class GroceryGameUi extends Application {
         
         //Launch the primarypage 
         window.setTitle("GroceryGame");
-        window.setScene(new PrimaryView().getView());
+        //window.setScene(new PrimaryView().getView());
+        window.setScene(new GameView("Miika", 1).getView());
         window.show();
     }
     

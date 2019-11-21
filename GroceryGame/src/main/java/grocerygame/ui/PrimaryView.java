@@ -5,6 +5,7 @@
  */
 package grocerygame.ui;
 
+import grocerygame.game.GameView;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Scene;

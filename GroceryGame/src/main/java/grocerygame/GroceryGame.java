@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package grocerygame.ui;
+package grocerygame;
         
-import grocerygame.game.GameView;
+import grocerygame.game.views.GameView;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class GroceryGameUi extends Application {
+public class GroceryGame extends Application {
    
 
     @Override
@@ -25,7 +25,7 @@ public class GroceryGameUi extends Application {
     
 
     public static void main(String[] args) {
-        launch(GroceryGameUi.class);
+        launch(GroceryGame.class);
     }
 
 }

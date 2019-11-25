@@ -4,14 +4,13 @@
  * and open the template in the editor.
  */
 package grocerygame;
-import grocerygame.ui.GroceryGameUi;
 
 
 public class Main {
 
     public static void main(String[] args) {
         System.out.println("Suoritus alkaa");
-        GroceryGameUi.main(args);
+        GroceryGame.main(args);
         System.out.println("Suoritus loppuu");
     }
     

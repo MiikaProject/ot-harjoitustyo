@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package grocerygame.ui;
+package grocerygame.primaryview.views;
 
-import grocerygame.game.GameView;
+import grocerygame.game.views.GameView;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Scene;

@@ -9,3 +9,4 @@
 | 21.11.2019     | 4 | pelinäkymän kehitystä, javafx opettelua |16 |
 | 22.11.2019     | 3 | pään hakkaamista seinään javafx kanssa |19 |
 | 25.11.2019     | 2 | projektin rakenteen korjaaminen tukemaan SRP |21 |
+| 26.11.2019     | 1 | testien kirjoittelua  |22 |

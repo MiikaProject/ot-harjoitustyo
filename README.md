@@ -17,11 +17,15 @@ yleinen testaus
 ```
 mvn test
 ```
-testaus kattavuus raportti
+### testaus kattavuus raportti
 ```
 mvn test jacoco:report
 ```
 ### Ohjelman käynnistys 
 ```
 mvn compile exec:java -Dexec.mainClass=grocerygame.Main
+```
+### Checkstyle raportti
+```
+mvn jxr:jxr checkstyle:checkstyle
 ```

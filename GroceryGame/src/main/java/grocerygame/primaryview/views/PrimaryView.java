@@ -17,17 +17,14 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
+    
 /**
  *
  * @author miika1
  */
 public class PrimaryView {
-    private Scene view;
 
-    
-    
-    
+    private Scene view;
 
     public PrimaryView() {
         Label settingsTitle = new Label("Settings");
@@ -43,26 +40,24 @@ public class PrimaryView {
         levelgroup.getToggles().addAll(levelOne, levelTwo, levelThree);
         HBox levels = new HBox(levelOne, levelTwo, levelThree);
         levels.setSpacing(10);
-        
-        
+
         //Error field
         Label errorfield = new Label();
 
         //Check chosen difficulty, username and start game
         Button play = new Button("Play!");
-        play.setOnAction(( event -> {
+        play.setOnAction((event -> {
             String playername = "";
             //validate username
-            if(userfield.getText().equals("")){
+            if (userfield.getText().equals("")) {
                 errorfield.setText("Give player name!");
                 return;
-                
+
             } else {
                 playername = userfield.getText();
                 System.out.println(playername);
             }
-            
-            
+
             //Validate chosen difficulty level
             int difficulty = 0;
             if (levelgroup.getSelectedToggle() == null) {
@@ -72,16 +67,14 @@ public class PrimaryView {
                 difficulty = Integer.parseInt(chosen.getText());
                 System.out.println(difficulty);
             }
-            
+
             //call method to launch game
             changeToGame(event, playername, difficulty);
 
         }));
-        
-        
-        
+
         //Build the settings section of the Ui
-        VBox settings = new VBox(settingsTitle, user, userfield, level, levels,errorfield, play);
+        VBox settings = new VBox(settingsTitle, user, userfield, level, levels, errorfield, play);
         settings.setSpacing(10);
 
         //Ranking list
@@ -102,19 +95,18 @@ public class PrimaryView {
         grid.setSpacing(15);
 
         //Build the scene and display it
-        view = new Scene(grid,400,400);
+        view = new Scene(grid, 400, 400);
     }
-    
-    public Scene getView(){
-        
-        
+
+    public Scene getView() {
+
         return view;
     }
-    
+
     //Launch game
-    public void changeToGame(ActionEvent event,String name,int level){
-        GameView game = new GameView(name,level);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+    public void changeToGame(ActionEvent event, String name, int level) {
+        GameView game = new GameView(name, level);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(game.getView());
         window.show();
     }

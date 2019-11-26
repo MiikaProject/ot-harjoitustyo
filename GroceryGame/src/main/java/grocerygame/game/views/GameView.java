@@ -37,12 +37,11 @@ public class GameView {
         pressedButtons = new HashMap<>();
         this.player = player;
         this.difficulty = difficulty;
-        
+
         Shopper shopper = new Shopper();
-        
-        
+
         GameController gamecontroller = new GameController(shopper);
-        
+
         //Set up grid for the window
         GridPane layout = new GridPane();
         ColumnConstraints column1 = new ColumnConstraints();
@@ -55,14 +54,13 @@ public class GameView {
         row2.setPercentHeight(75);
         layout.getColumnConstraints().addAll(column1, column2);
         layout.getRowConstraints().addAll(row1, row2);
-        
+
         //Buttons to return back to primary view and exit game
         Button quit = new Button("Return");
         quit.setOnAction(event -> gamecontroller.changeToPrimaryView(event));
         Button exit = new Button("Exit");
         exit.setOnAction(event -> gamecontroller.exitGame(event));
 
-        
         Label items = new Label("Items remaining:");
         Label score = new Label("Time:");
 
@@ -90,17 +88,12 @@ public class GameView {
 
         Pane gameField = new Pane();
 
-        
-
         gameField.getChildren().add(shopper.getShopper());
 
-        
-        
-        layout.add(gameField, 0,1,1, 1);
+        layout.add(gameField, 0, 1, 1, 1);
         game = new Scene(layout, 400, 400);
-        
-        game.setOnKeyPressed(event->gamecontroller.handleKeyPress(event));
-        
+
+        game.setOnKeyPressed(event -> gamecontroller.handleKeyPress(event));
 
     }
 
@@ -109,7 +102,5 @@ public class GameView {
 
         return game;
     }
-
-    
 
 }

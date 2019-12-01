@@ -28,13 +28,13 @@ public class GameView {
     private Scene game;
     private Map<KeyCode, Boolean> pressedButtons;
     private Stage window;
+
     //Build view
-    public GameView(String player, int difficulty,Stage window) {
+    public GameView(String player, int difficulty, Stage window) {
         pressedButtons = new HashMap<>();
         this.player = player;
         this.difficulty = difficulty;
         this.window = window;
-
 
         //Set up grid for the window
         GridPane layout = new GridPane();
@@ -51,22 +51,21 @@ public class GameView {
 
         //Buttons to return back to primary view and exit game
         OptionsPanel options = new OptionsPanel();
-        
+
         layout.add(options.getOptions(), 0, 0);
 
         //Items
         GroceryList grocerylist = new GroceryList();
         GroceryListView listItems = new GroceryListView(grocerylist);
 
-
         layout.add(listItems.getView(), 1, 0);
 
-        GameView2 gamefield = new GameView2(new GameGrid(10,10,grocerylist));
-        
+        GameView2 gamefield = new GameView2(new GameGrid(10, 10, grocerylist));
+
         layout.add(gamefield.getView(), 0, 1, 1, 1);
-        
+
         game = new Scene(layout, 400, 400);
-        GameController gamecontroller = new GameController(gamefield,listItems,window);
+        GameController gamecontroller = new GameController(gamefield, listItems, window);
         game.setOnKeyPressed(event -> gamecontroller.handleKeyPress(event));
         options.setController(gamecontroller);
     }

@@ -3,27 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package grocerygame.game.views;
+package grocerygame.gameover.views;
 
-import grocerygame.game.controllers.GameController;
+import grocerygame.gameover.controllers.GameOverController;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 
 /**
  *
  * @author miika1
  */
-public class OptionsPanel {
+public class GameOverOptions {
 
     HBox options;
     Button quit;
     Button exit;
-    GameController gamecontroller;
+    GameOverController gameovercontroller;
+    Stage window;
 
-    public OptionsPanel() {
+    public GameOverOptions(Stage window) {
         options = new HBox();
         quit = new Button("Return");
         exit = new Button("Exit");
+        this.window = window;
         options.getChildren().add(quit);
         options.getChildren().add(exit);
         options.setSpacing(5);
@@ -43,10 +46,9 @@ public class OptionsPanel {
         return quit;
     }
 
-    public void setController(GameController controller) {
-        this.gamecontroller = controller;
-        quit.setOnAction(event -> gamecontroller.changeToPrimaryView(event));
-        exit.setOnAction(event -> gamecontroller.exitGame(event));
+    public void setController(GameOverController controller) {
+        this.gameovercontroller = controller;
+        quit.setOnAction(event -> gameovercontroller.changeToPrimaryView(event));
+        exit.setOnAction(event -> gameovercontroller.exitGame(event));
     }
-
 }

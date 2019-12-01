@@ -10,13 +10,13 @@ package grocerygame.game.models;
  * @author miika1
  */
 public class Location {
+
     private int x;
     private int y;
-    
+
     public Location() {
     }
-    
-    
+
     public Location(int y, int x) {
         this.x = x;
         this.y = y;
@@ -37,17 +37,15 @@ public class Location {
     public void setY(int y) {
         this.y = y;
     }
-    
-    public void setLocation(int y, int x){
+
+    public void setLocation(int y, int x) {
         this.x = x;
         this.y = y;
     }
 
     @Override
     public String toString() {
-        return "X:"+x+ " Y: "+y;
+        return "X:" + x + " Y: " + y;
     }
-    
-    
-    
+
 }

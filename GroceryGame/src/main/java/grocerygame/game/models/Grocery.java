@@ -10,6 +10,7 @@ package grocerygame.game.models;
  * @author miika1
  */
 public class Grocery {
+
     private String name;
     private String category;
 
@@ -20,7 +21,7 @@ public class Grocery {
 
     @Override
     public String toString() {
-        return "Name: "+name+ " Category: "+category;
+        return "Name: " + name + " Category: " + category;
     }
 
     public String getCategory() {
@@ -30,13 +31,5 @@ public class Grocery {
     public String getName() {
         return name;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 }

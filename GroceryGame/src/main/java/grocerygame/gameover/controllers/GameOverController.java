@@ -16,13 +16,13 @@ import javafx.stage.Stage;
  * @author miika1
  */
 public class GameOverController {
+
     private Stage window;
-    
+
     public GameOverController(Stage window) {
         this.window = window;
     }
-    
-    
+
     //method to return back to primaryview
     public void changeToPrimaryView(ActionEvent event) {
         PrimaryView primaryview = new PrimaryView(window);
@@ -30,7 +30,7 @@ public class GameOverController {
         window.setScene(primaryview.getView());
         window.show();
     }
-    
+
     //Exit game
     public void exitGame(ActionEvent event) {
         Platform.exit();

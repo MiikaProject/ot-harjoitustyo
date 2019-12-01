@@ -21,7 +21,6 @@ public class GameGrid {
     public GameGrid(int x, int y, GroceryList groceryList) {
         grid = new Cell[y][x];
         this.grocerylist = groceryList;
-        
 
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
@@ -33,8 +32,6 @@ public class GameGrid {
         shopper = new Location();
         grid[y - 1][x - 1].setCellType("S");
         shopper.setLocation(y - 1, x - 1);
-
-        
 
         levelOne();
 
@@ -67,7 +64,6 @@ public class GameGrid {
             grid[shopper.getY()][shopper.getX()].setCellType("S");
         }
 
-        
     }
 
     public void moveUpShopper() {
@@ -77,7 +73,6 @@ public class GameGrid {
             grid[shopper.getY()][shopper.getX()].setCellType("S");
         }
 
-        
     }
 
     public void moveLeftShopper() {
@@ -87,8 +82,6 @@ public class GameGrid {
             grid[shopper.getY()][shopper.getX()].setCellType("S");
         }
 
-        
-        
     }
 
     public void moveRightShopper() {
@@ -99,7 +92,6 @@ public class GameGrid {
             grid[shopper.getY()][shopper.getX()].setCellType("S");
         }
 
-        
     }
 
     public void levelOne() {
@@ -122,9 +114,9 @@ public class GameGrid {
         for (int i = 3; i < 7; i++) {
             grid[i][5].setCellType("R");
         }
-        
-        for(int i = 0; i < 3; i++){
-            grid[grid.length-1][i].setCellType("C");
+
+        for (int i = 0; i < 3; i++) {
+            grid[grid.length - 1][i].setCellType("C");
         }
 
     }
@@ -134,19 +126,19 @@ public class GameGrid {
                 | grid[y][x].getType().equals("C")) {
 
             if (!grocerylist.getGrocerylist().isEmpty()) {
-                Grocery itemToBeRemove= null;
+                Grocery itemToBeRemove = null;
                 for (Grocery grocery : grocerylist.getGrocerylist()) {
 
                     if (grocery.getCategory().equals(grid[y][x].getType())) {
-                        itemToBeRemove=grocery;
+                        itemToBeRemove = grocery;
                     }
 
                 }
                 grocerylist.remove(itemToBeRemove);
             } else {
-                if(grid[y][x].getType().equals("C")){
+                if (grid[y][x].getType().equals("C")) {
                     //System.out.println("DONE!");
-                    gameover=true;
+                    gameover = true;
                 }
             }
 
@@ -154,8 +146,8 @@ public class GameGrid {
         }
         return true;
     }
-    
-    public boolean gameover(){
+
+    public boolean gameover() {
         return gameover;
     }
 }

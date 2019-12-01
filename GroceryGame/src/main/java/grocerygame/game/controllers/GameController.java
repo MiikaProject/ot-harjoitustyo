@@ -26,7 +26,6 @@ import javafx.stage.Window;
  */
 public class GameController {
 
-    
     private GameGrid gamegrid;
     private GameView2 gameview2;
     private GroceryListView grocerylistview;
@@ -34,22 +33,16 @@ public class GameController {
     private Stage window;
 
     public GameController(GameView2 gameview2, GroceryListView grocerylistview, Stage window) {
-        
-        
+
         this.gameview2 = gameview2;
         this.gamegrid = gameview2.getGrid();
         this.grocerylistview = grocerylistview;
         this.window = window;
-        
+
     }
-    
-   
-    
-    
 
     public void handleKeyPress(KeyEvent event) {
-        
-        
+
         KeyCode key = event.getCode();
         if (key == KeyCode.DOWN) {
             gamegrid.moveDownShopper();
@@ -65,29 +58,27 @@ public class GameController {
             refreshView();
         }
 
-        
-
     }
-    
-    public void refreshView(){
-        if(gamegrid.gameover()==true){
+
+    public void refreshView() {
+        if (gamegrid.gameover() == true) {
             changeToGameOver();
         }
         gameview2.redrawGrid();
         grocerylistview.createView();
-        
+
     }
-    
+
     //method to return back to primaryview
     public void changeToPrimaryView(ActionEvent event) {
-        System.out.println("haha");
+        
         PrimaryView primaryview = new PrimaryView(window);
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(primaryview.getView());
         window.show();
     }
-    
-    public void changeToGameOver() { 
+
+    public void changeToGameOver() {
         GameOverView gameoverview = new GameOverView(window);
         window.setScene(gameoverview.getView());
 
@@ -96,6 +87,5 @@ public class GameController {
     public void exitGame(ActionEvent event) {
         Platform.exit();
     }
-    
 
 }

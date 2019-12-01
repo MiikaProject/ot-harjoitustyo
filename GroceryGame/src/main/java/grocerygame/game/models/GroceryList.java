@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author miika1
  */
 public class GroceryList {
+
     private ArrayList<Grocery> grocerylist;
 
     public GroceryList() {
@@ -19,9 +20,8 @@ public class GroceryList {
         addToGrocerylist(new Grocery("Milk", "M"));
         addToGrocerylist(new Grocery("Bread", "B"));
     }
-    
-    
-    public void addToGrocerylist(Grocery grocery){
+
+    public void addToGrocerylist(Grocery grocery) {
         grocerylist.add(grocery);
     }
 
@@ -33,15 +33,9 @@ public class GroceryList {
     public ArrayList<Grocery> getGrocerylist() {
         return grocerylist;
     }
-    
-    public void remove(Grocery grocery){
+
+    public void remove(Grocery grocery) {
         grocerylist.remove(grocery);
     }
-    
-    
-    
-    
-    
-    
-    
+
 }

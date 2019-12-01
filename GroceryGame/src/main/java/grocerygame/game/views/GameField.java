@@ -13,22 +13,20 @@ import javafx.scene.layout.Pane;
  * @author miika1
  */
 public class GameField {
+
     Pane gamefield;
     GameGrid gamegrid;
-    
+
     public GameField() {
         gamefield = new Pane();
-        
-        
-        
+
     }
-    
-    
-    public void drawGameField(){
-        
+
+    public void drawGameField() {
+
         System.out.println("drawing");
-        for(int i = 0;i < gamegrid.grid[0].length;i++){
-            for(int j = 0; j < gamegrid.grid[i].length;j++){
+        for (int i = 0; i < gamegrid.grid[0].length; i++) {
+            for (int j = 0; j < gamegrid.grid[i].length; j++) {
                 gamefield.getChildren().add(gamegrid.grid[i][j].getImage());
             }
         }
@@ -37,8 +35,5 @@ public class GameField {
     public Pane getGamefield() {
         return gamefield;
     }
-    
-    
-    
-    
+
 }

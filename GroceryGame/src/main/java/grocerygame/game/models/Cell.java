@@ -14,12 +14,12 @@ import javafx.scene.shape.Rectangle;
  * @author miika1
  */
 public class Cell {
+
     private String type;
     int x;
     int y;
     Node image;
-    
-    
+
     //Cell types:
     // O = empty
     // S = shopper
@@ -29,8 +29,6 @@ public class Cell {
     // R = Rice/Pasta
     // B = Bread
     // C = Cashier
-    
-    
     public Cell(int x, int y) {
         this.x = x;
         this.y = y;
@@ -40,9 +38,8 @@ public class Cell {
     public Cell(String type) {
         this.type = type;
     }
-    
 
-    public void setCellType(String type){
+    public void setCellType(String type) {
         this.type = type;
     }
 
@@ -68,45 +65,45 @@ public class Cell {
     }
 
     public void setLocation(int y, int x) {
-        this.y=y;
-        this.x=x;
+        this.y = y;
+        this.x = x;
     }
 
     public Node getImage() {
-        if(type.equals("O")){
-            Rectangle cell = new Rectangle(10,10);
+        if (type.equals("O")) {
+            Rectangle cell = new Rectangle(10, 10);
             cell.setFill(Color.ANTIQUEWHITE);
             return cell;
-        } else if (type.equals("S")){
-            Rectangle cell = new Rectangle(10,10);
+        } else if (type.equals("S")) {
+            Rectangle cell = new Rectangle(10, 10);
             cell.setFill(Color.AQUA);
             return cell;
-        } else if (type.equals("M")){
-            Rectangle cell = new Rectangle(10,10);
+        } else if (type.equals("M")) {
+            Rectangle cell = new Rectangle(10, 10);
             cell.setFill(Color.BURLYWOOD);
             return cell;
-        } else if (type.equals("P")){
-            Rectangle cell = new Rectangle(10,10);
+        } else if (type.equals("P")) {
+            Rectangle cell = new Rectangle(10, 10);
             cell.setFill(Color.BLUEVIOLET);
             return cell;
-        } else if (type.equals("B")){
-            Rectangle cell = new Rectangle(10,10);
+        } else if (type.equals("B")) {
+            Rectangle cell = new Rectangle(10, 10);
             cell.setFill(Color.YELLOW);
             return cell;
-        } else if (type.equals("F")){
-            Rectangle cell = new Rectangle(10,10);
+        } else if (type.equals("F")) {
+            Rectangle cell = new Rectangle(10, 10);
             cell.setFill(Color.GREEN);
             return cell;
-        } else if (type.equals("R")){
-            Rectangle cell = new Rectangle(10,10);
+        } else if (type.equals("R")) {
+            Rectangle cell = new Rectangle(10, 10);
             cell.setFill(Color.DARKORANGE);
             return cell;
-        } else if (type.equals("C")){
-            Rectangle cell = new Rectangle(10,10);
+        } else if (type.equals("C")) {
+            Rectangle cell = new Rectangle(10, 10);
             cell.setFill(Color.BLACK);
             return cell;
         }
-        
+
         return null;
     }
 
@@ -114,15 +111,4 @@ public class Cell {
         return this.type;
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

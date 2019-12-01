@@ -25,8 +25,12 @@ import javafx.stage.Stage;
 public class PrimaryView {
 
     private Scene view;
+    private Stage window;
 
-    public PrimaryView() {
+    public PrimaryView(Stage window) {
+        
+        this.window = window;
+        
         Label settingsTitle = new Label("Settings");
         Label user = new Label("Enter name");
         TextField userfield = new TextField();
@@ -105,7 +109,7 @@ public class PrimaryView {
 
     //Launch game
     public void changeToGame(ActionEvent event, String name, int level) {
-        GameView game = new GameView(name, level);
+        GameView game = new GameView(name, level,window);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(game.getView());
         window.show();

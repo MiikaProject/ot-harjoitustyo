@@ -6,6 +6,7 @@
 package grocerygame;
         
 import grocerygame.game.views.GameView;
+import grocerygame.game.views.GameView2;
 import grocerygame.primaryview.views.PrimaryView;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -18,7 +19,7 @@ public class GroceryGame extends Application {
         
         //Launch the primarypage 
         window.setTitle("GroceryGame");
-        window.setScene(new PrimaryView().getView());
+        window.setScene(new PrimaryView(window).getView());
         
         window.show();
     }

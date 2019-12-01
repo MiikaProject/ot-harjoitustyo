@@ -6,8 +6,7 @@
 package grocerygame.game.controllers;
 
 import grocerygame.game.models.GameGrid;
-import grocerygame.game.models.Shopper;
-import grocerygame.game.views.GameView2;
+import grocerygame.game.views.GameDisplay;
 import grocerygame.game.views.GroceryListView;
 import grocerygame.gameover.views.GameOverView;
 import grocerygame.primaryview.views.PrimaryView;
@@ -16,9 +15,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.shape.Shape;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 /**
  *
@@ -27,12 +24,12 @@ import javafx.stage.Window;
 public class GameController {
 
     private GameGrid gamegrid;
-    private GameView2 gameview2;
+    private GameDisplay gameview2;
     private GroceryListView grocerylistview;
     private boolean gameover;
     private Stage window;
 
-    public GameController(GameView2 gameview2, GroceryListView grocerylistview, Stage window) {
+    public GameController(GameDisplay gameview2, GroceryListView grocerylistview, Stage window) {
 
         this.gameview2 = gameview2;
         this.gamegrid = gameview2.getGrid();

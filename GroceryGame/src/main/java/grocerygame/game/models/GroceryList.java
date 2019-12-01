@@ -19,6 +19,9 @@ public class GroceryList {
         grocerylist = new ArrayList<>();
         addToGrocerylist(new Grocery("Milk", "M"));
         addToGrocerylist(new Grocery("Bread", "B"));
+        addToGrocerylist(new Grocery("Icecream", "P"));
+        addToGrocerylist(new Grocery("Banana", "F"));
+        addToGrocerylist(new Grocery("Spaghetti", "R"));
     }
 
     public void addToGrocerylist(Grocery grocery) {

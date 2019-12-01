@@ -54,16 +54,22 @@ public class GameView {
 
         layout.add(options.getOptions(), 0, 0);
 
-        //Items
+        //"Grocerylist"
         GroceryList grocerylist = new GroceryList();
         GroceryListView listItems = new GroceryListView(grocerylist);
-
         layout.add(listItems.getView(), 1, 0);
-
-        GameView2 gamefield = new GameView2(new GameGrid(10, 10, grocerylist));
-
-        layout.add(gamefield.getView(), 0, 1, 1, 1);
-
+        
+        //The actual game
+        GameDisplay gamefield = new GameDisplay(new GameGrid(20, 20, grocerylist));
+        
+        layout.add(gamefield.getView(), 0, 1);
+        
+        
+        //Legend for shelves
+        GroceryTipsView guide = new GroceryTipsView();
+        
+        layout.add(guide.getGuide(), 1, 1);
+        
         game = new Scene(layout, 400, 400);
         GameController gamecontroller = new GameController(gamefield, listItems, window);
         game.setOnKeyPressed(event -> gamecontroller.handleKeyPress(event));

@@ -118,6 +118,12 @@ public class GameGrid {
         for (int i = 0; i < 3; i++) {
             grid[grid.length - 1][i].setCellType("C");
         }
+        
+        for (int i = 10; i < 13; i++) {
+            grid[grid.length - 1][i].setCellType("E");
+        }
+        
+        
 
     }
 

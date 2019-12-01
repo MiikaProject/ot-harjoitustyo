@@ -6,7 +6,7 @@
 package grocerygame;
         
 import grocerygame.game.views.GameView;
-import grocerygame.game.views.GameView2;
+import grocerygame.game.views.GameDisplay;
 import grocerygame.primaryview.views.PrimaryView;
 import javafx.application.Application;
 import javafx.stage.Stage;

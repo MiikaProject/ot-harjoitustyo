@@ -29,6 +29,8 @@ public class Cell {
     // R = Rice/Pasta
     // B = Bread
     // C = Cashier
+    // E = Candies
+    
     public Cell(int x, int y) {
         this.x = x;
         this.y = y;
@@ -101,6 +103,10 @@ public class Cell {
         } else if (type.equals("C")) {
             Rectangle cell = new Rectangle(10, 10);
             cell.setFill(Color.BLACK);
+            return cell;
+        } else if (type.equals("E")) {
+            Rectangle cell = new Rectangle(10, 10);
+            cell.setFill(Color.LIGHTCORAL);
             return cell;
         }
 

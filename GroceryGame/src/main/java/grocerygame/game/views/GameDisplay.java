@@ -14,13 +14,13 @@ import javafx.scene.layout.GridPane;
  *
  * @author miika1
  */
-public class GameView2 {
+public class GameDisplay {
 
     private Scene game;
     private GameGrid gamegrid;
     private GridPane gameview;
 
-    public GameView2(GameGrid gamegrid) {
+    public GameDisplay(GameGrid gamegrid) {
         gameview = new GridPane();
         game = new Scene(gameview, 40, 30);
 

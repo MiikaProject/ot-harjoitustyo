@@ -10,3 +10,6 @@
 | 22.11.2019     | 3 | pään hakkaamista seinään javafx kanssa |19 |
 | 25.11.2019     | 2 | projektin rakenteen korjaaminen tukemaan SRP |21 |
 | 26.11.2019     | 1 | testien kirjoittelua  |22 |
+| 29.11.2019     | 3 | uusi rakenne projektille  |25 |
+| 1.12.2019     | 7 | projekti logiikan saattaminen toimivaksi  |32 |
+| 2.12.2019     | 3 | kenttien ja vaikeustasojen luominen |35 |

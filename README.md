@@ -29,3 +29,8 @@ mvn compile exec:java -Dexec.mainClass=grocerygame.Main
 ```
 mvn jxr:jxr checkstyle:checkstyle
 ```
+### Jar generointi
+```
+mvn package
+```
+

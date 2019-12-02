@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Shopper.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GroceryGame</a> &gt; <a href="index.source.html" class="el_package">grocerygame.game.models</a> &gt; <span class="el_source">Shopper.java</span></div><h1>Shopper.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ta */
+package grocerygame.game.models;
+
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+
+/**
+ *
+ * @author miika
+ */
+public class Shopper extends Rectangle {
+
+    private Rectangle shape;
+    int x;
+    int y;
+    private double ylimit;
+    private double xlimit;
+
+<span class="fc" id="L23">    public Shopper() {</span>
+<span class="fc" id="L24">        shape = new Rectangle(30, 30);</span>
+<span class="fc" id="L25">        this.x = 0;</span>
+<span class="fc" id="L26">        this.y = 0;</span>
+<span class="fc" id="L27">        xlimit = 370;</span>
+<span class="fc" id="L28">        ylimit = 270;</span>
+<span class="fc" id="L29">        shape.setFill(Color.BLUEVIOLET);</span>
+<span class="fc" id="L30">    }</span>
+
+    public void moveUp() {
+<span class="fc" id="L33">        printLocation();</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        if (shape.getY() &lt;= 0) {</span>
+<span class="fc" id="L35">            return;</span>
+        }
+<span class="fc" id="L37">        shape.setY(shape.getY() - 5);</span>
+<span class="fc" id="L38">        this.y = y - 5;</span>
+<span class="fc" id="L39">    }</span>
+
+    public void moveDown() {
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if (shape.getY() &gt;= ylimit) {</span>
+<span class="fc" id="L43">            return;</span>
+        }
+<span class="fc" id="L45">        shape.setY(shape.getY() + 5);</span>
+<span class="fc" id="L46">        y = y + 5;</span>
+<span class="fc" id="L47">    }</span>
+
+    public void moveRight() {
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        if (shape.getX() &gt;= xlimit) {</span>
+<span class="fc" id="L51">            return;</span>
+        }
+<span class="fc" id="L53">        shape.setX(shape.getX() + 5);</span>
+<span class="fc" id="L54">        x = x + 5;</span>
+<span class="fc" id="L55">    }</span>
+
+    public void moveLeft() {
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        if (shape.getX() &lt;= 0) {</span>
+<span class="fc" id="L59">            return;</span>
+        }
+<span class="fc" id="L61">        shape.setX(shape.getX() - 5);</span>
+<span class="fc" id="L62">        this.x = this.x - 5;</span>
+<span class="fc" id="L63">    }</span>
+
+    public void printLocation() {
+<span class="fc" id="L66">        System.out.println(&quot;X:&quot; + x + &quot; Y:&quot; + y);</span>
+<span class="fc" id="L67">    }</span>
+
+    public void setLocation(int x, int y) {
+<span class="fc" id="L70">        shape.setX(x);</span>
+<span class="fc" id="L71">        this.x = x;</span>
+<span class="fc" id="L72">        this.y = y;</span>
+<span class="fc" id="L73">        shape.setY(y);</span>
+<span class="fc" id="L74">    }</span>
+
+    public Rectangle getShopper() {
+<span class="nc" id="L77">        return shape;</span>
+    }
+
+    public void setLimits(int x, int y) {
+<span class="fc" id="L81">        this.xlimit = x - shape.getWidth();</span>
+<span class="fc" id="L82">        this.ylimit = y - shape.getHeight();</span>
+<span class="fc" id="L83">    }</span>
+
+    public int getXCoordinate() {
+<span class="fc" id="L86">        return this.x;</span>
+    }
+
+    public int getYCoordinate() {
+<span class="fc" id="L90">        return this.y;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

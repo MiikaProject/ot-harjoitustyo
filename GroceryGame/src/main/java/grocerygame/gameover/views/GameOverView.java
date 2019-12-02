@@ -18,10 +18,10 @@ import grocerygame.gameover.controllers.GameOverController;
  * @author miika1
  */
 public class GameOverView {
-    
+
     private Scene gameover;
     Stage window;
-    
+
     public GameOverView(Stage window) {
         this.window = window;
         BorderPane layout = new BorderPane();
@@ -29,13 +29,13 @@ public class GameOverView {
         GameOverOptions options = new GameOverOptions(window);
         options.setController(new GameOverController(window));
         layout.setTop(options.getOptions());
-        
+
         gameover = new Scene(layout, 400, 400);
-        
+
     }
-    
+
     public Scene getView() {
         return gameover;
     }
-    
+
 }

@@ -68,7 +68,7 @@ public class GameController {
 
     //method to return back to primaryview
     public void changeToPrimaryView(ActionEvent event) {
-        
+
         PrimaryView primaryview = new PrimaryView(window);
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(primaryview.getView());

@@ -29,10 +29,13 @@ public class GroceryListView {
         list.getChildren().clear();
         if (grocerylist.getGrocerylist().isEmpty()) {
             list.getChildren().add(new Label("Cashier next!"));
+        } else {
+            list.getChildren().add(new Label("GroceryList:"));
+            for (Grocery grocery : grocerylist.getGrocerylist()) {
+                list.getChildren().add(new Label(grocery.getName()));
+            }
         }
-        for (Grocery grocery : grocerylist.getGrocerylist()) {
-            list.getChildren().add(new Label(grocery.getName()));
-        }
+
     }
 
     public VBox getView() {

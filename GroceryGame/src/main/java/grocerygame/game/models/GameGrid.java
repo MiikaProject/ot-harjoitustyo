@@ -95,32 +95,51 @@ public class GameGrid {
     }
 
     public void levelOne() {
-        for (int i = 2; i < 7; i++) {
+        for (int i = 5; i < 15; i++) {
             grid[0][i].setCellType("M");
         }
 
-        for (int i = 3; i < 8; i++) {
-            grid[i][grid[i].length - 1].setCellType("P");
+        for (int i = 3; i < 12; i++) {
+            grid[i][15].setCellType("P");
+            grid[i][16].setCellType("P");
         }
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 2; i < 8; i++) {
             grid[i][0].setCellType("B");
         }
+        
+        for (int i = 10; i < 14; i++) {
+            grid[i][0].setCellType("H");
+        }
 
-        for (int i = 3; i < 7; i++) {
+        for (int i = 3; i < 10; i++) {
             grid[i][4].setCellType("F");
         }
 
-        for (int i = 3; i < 7; i++) {
-            grid[i][5].setCellType("R");
-        }
-
-        for (int i = 0; i < 3; i++) {
-            grid[grid.length - 1][i].setCellType("C");
+        for (int i = 3; i < 10; i++) {
+            grid[i][5].setCellType("V");
         }
         
-        for (int i = 10; i < 13; i++) {
-            grid[grid.length - 1][i].setCellType("E");
+        for (int i = 3; i < 10; i++) {
+            grid[i][8].setCellType("ME");
+        }
+        
+        for (int i = 3; i < 10; i++) {
+            grid[i][9].setCellType("FI");
+        }
+        
+        for (int i = 3; i < 10; i++) {
+            grid[i][19].setCellType("D");
+        }
+
+        for (int i = 0; i < 5; i++) {
+            grid[grid.length - 1][i].setCellType("C");
+            grid[grid.length - 2][i].setCellType("C");
+        }
+        
+        for (int i = 10; i < 15; i++) {
+            grid[grid.length - 4][i].setCellType("E");
+            grid[grid.length - 5][i].setCellType("E");
         }
         
         
@@ -129,7 +148,8 @@ public class GameGrid {
 
     private boolean checkCell(int y, int x) {
         if (grid[y][x].getType().equals("M") | grid[y][x].getType().equals("P") | grid[y][x].getType().equals("L") | grid[y][x].getType().equals("F") | grid[y][x].getType().equals("R") | grid[y][x].getType().equals("B")
-                | grid[y][x].getType().equals("C")) {
+                | grid[y][x].getType().equals("C")| grid[y][x].getType().equals("E") | grid[y][x].getType().equals("V") | grid[y][x].getType().equals("D") | grid[y][x].getType().equals("ME")
+                | grid[y][x].getType().equals("FI")| grid[y][x].getType().equals("H")) {
 
             if (!grocerylist.getGrocerylist().isEmpty()) {
                 Grocery itemToBeRemove = null;

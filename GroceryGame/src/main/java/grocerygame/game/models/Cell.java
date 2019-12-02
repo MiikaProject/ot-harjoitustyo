@@ -30,6 +30,11 @@ public class Cell {
     // B = Bread
     // C = Cashier
     // E = Candies
+    // V = Vegetables
+    // D = Drinks
+    // ME = Meat
+    // FI = Fish
+    // H = Household
     
     public Cell(int x, int y) {
         this.x = x;
@@ -107,6 +112,26 @@ public class Cell {
         } else if (type.equals("E")) {
             Rectangle cell = new Rectangle(10, 10);
             cell.setFill(Color.LIGHTCORAL);
+            return cell;
+        } else if (type.equals("V")) {
+            Rectangle cell = new Rectangle(10, 10);
+            cell.setFill(Color.GREENYELLOW);
+            return cell;
+        } else if (type.equals("D")) {
+            Rectangle cell = new Rectangle(10, 10);
+            cell.setFill(Color.AQUAMARINE);
+            return cell;
+        } else if (type.equals("ME")) {
+            Rectangle cell = new Rectangle(10, 10);
+            cell.setFill(Color.CADETBLUE);
+            return cell;
+        } else if (type.equals("FI")) {
+            Rectangle cell = new Rectangle(10, 10);
+            cell.setFill(Color.LIGHTSEAGREEN);
+            return cell;
+        } else if (type.equals("H")) {
+            Rectangle cell = new Rectangle(10, 10);
+            cell.setFill(Color.GREENYELLOW);
             return cell;
         }
 

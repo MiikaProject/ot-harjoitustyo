@@ -8,10 +8,7 @@ package grocerygame.game.views;
 import grocerygame.game.controllers.GameController;
 import grocerygame.game.models.GameGrid;
 import grocerygame.game.models.GroceryList;
-import java.util.HashMap;
-import java.util.Map;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
@@ -26,12 +23,10 @@ public class GameView {
     private String player;
     private int difficulty;
     private Scene game;
-    private Map<KeyCode, Boolean> pressedButtons;
     private Stage window;
 
     //Build view
     public GameView(String player, int difficulty, Stage window) {
-        pressedButtons = new HashMap<>();
         this.player = player;
         this.difficulty = difficulty;
         this.window = window;
@@ -43,9 +38,9 @@ public class GameView {
         ColumnConstraints column2 = new ColumnConstraints();
         column2.setPercentWidth(25);
         RowConstraints row1 = new RowConstraints();
-        row1.setPercentHeight(25);
+        row1.setPercentHeight(50);
         RowConstraints row2 = new RowConstraints();
-        row2.setPercentHeight(75);
+        row2.setPercentHeight(50);
         layout.getColumnConstraints().addAll(column1, column2);
         layout.getRowConstraints().addAll(row1, row2);
 
@@ -55,9 +50,9 @@ public class GameView {
         layout.add(options.getOptions(), 0, 0);
 
         //"Grocerylist"
-        GroceryList grocerylist = new GroceryList();
+        GroceryList grocerylist = new GroceryList(this.difficulty);
         GroceryListView listItems = new GroceryListView(grocerylist);
-        layout.add(listItems.getView(), 1, 0);
+        layout.add(listItems.getView(), 1, 1);
         
         //The actual game
         GameDisplay gamefield = new GameDisplay(new GameGrid(20, 20, grocerylist));
@@ -68,7 +63,7 @@ public class GameView {
         //Legend for shelves
         GroceryTipsView guide = new GroceryTipsView();
         
-        layout.add(guide.getGuide(), 1, 1);
+        layout.add(guide.getGuide(), 1, 0);
         
         game = new Scene(layout, 400, 400);
         GameController gamecontroller = new GameController(gamefield, listItems, window);

@@ -46,11 +46,11 @@ public class GroceryTipsView {
         guide.add(BreadColor, 1, 3);
         
         
-        Label CashierText = new Label("Cashier ");
-        Rectangle CashierColor = new Rectangle(10, 10);
-        CashierColor.setFill(Color.BLACK);
-        guide.add(CashierText, 0, 4);
-        guide.add(CashierColor, 1, 4);
+        Label DrinksText = new Label("Drinks");
+        Rectangle DrinksColor = new Rectangle(10, 10);
+        DrinksColor.setFill(Color.AQUAMARINE);
+        guide.add(DrinksText, 0, 4);
+        guide.add(DrinksColor, 1, 4);
         
         Label FrozenText = new Label("Frozen");
         Rectangle FrozenColor = new Rectangle(10, 10);
@@ -60,7 +60,7 @@ public class GroceryTipsView {
         
         Label MeatText = new Label("Meat");
         Rectangle MeatColor = new Rectangle(10, 10);
-        MeatColor.setFill(Color.LIGHTCORAL);
+        MeatColor.setFill(Color.CADETBLUE);
         guide.add(MeatText, 0, 6);
         guide.add(MeatColor, 1, 6);
         
@@ -72,7 +72,7 @@ public class GroceryTipsView {
         
         Label VegetablesText = new Label("Vegetables");
         Rectangle VegetablesColor = new Rectangle(10, 10);
-        FishColor.setFill(Color.FUCHSIA);
+        VegetablesColor.setFill(Color.GREENYELLOW);
         guide.add(VegetablesText, 0, 8);
         guide.add(VegetablesColor, 1, 8);
         
@@ -89,7 +89,11 @@ public class GroceryTipsView {
         guide.add(HouseholdText, 0, 10);
         guide.add(HouseholdColor, 1, 10);
         
-        
+        Label CashierText = new Label("Cashier ");
+        Rectangle CashierColor = new Rectangle(10, 10);
+        CashierColor.setFill(Color.BLACK);
+        guide.add(CashierText, 0, 11);
+        guide.add(CashierColor, 1, 11);
         
         
         

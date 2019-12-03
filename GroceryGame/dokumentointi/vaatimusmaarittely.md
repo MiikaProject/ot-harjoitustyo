@@ -5,7 +5,7 @@ Sovellus on peli, jossa pelaaja liikuttaa kaupassa hahmoa keräten ostoslistalla
 
 
 ## Perusversion tarjoama toiminnallisuus
-* Käyttöliittymä, jonka avulla pääsee peliin &#9745;
+* Käyttöliittymä, jonka avulla pääsee peliin 
 * Ennen pelaamista käyttäjä syöttää nimensä, jota käytetään ranking-listan ylläpitoon etusivulla &#9745;
 * Pelaa voi valita vaikeustason, jonka perusteella määritetään kuinka monta esinettä hänen tulee kerätä &#9745;
 * Taso 1 = 3 esinettä, Taso 2 = 5 esinettä, Taso 3 = 7 esinettä &#9745;

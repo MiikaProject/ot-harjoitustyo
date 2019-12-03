@@ -34,3 +34,8 @@ mvn jxr:jxr checkstyle:checkstyle
 mvn package
 ```
 
+### Jar suorittaminen
+```
+java -jar GroceryGame-1.0-SNAPSHOT.jar".
+```
+

@@ -41,6 +41,12 @@ public class Cell {
         type = "O";
     }
 
+    public Cell() {
+        this.x = 0;
+        this.y = 0;
+        type = "O";
+    }
+
     public Cell(String type) {
         this.type = type;
     }

@@ -17,6 +17,12 @@ public class GroceryList {
     private ArrayList<Grocery> grocerylist;
     private ArrayList<Grocery> groceryDatabase;
 
+    public GroceryList() {
+        grocerylist = new ArrayList<>();
+        groceryDatabase = new ArrayList<>();
+        initDatabase();
+    }
+
     public GroceryList(int difficulty) {
         grocerylist = new ArrayList<>();
         groceryDatabase = new ArrayList<>();
@@ -42,6 +48,10 @@ public class GroceryList {
 
     public ArrayList<Grocery> getGrocerylist() {
         return grocerylist;
+    }
+
+    public ArrayList<Grocery> getGroceryDatabase() {
+        return groceryDatabase;
     }
 
     public void remove(Grocery grocery) {
@@ -75,7 +85,7 @@ public class GroceryList {
         }
     }
 
-    private Grocery randomGrocery() {
+    public Grocery randomGrocery() {
         Random random = new Random();
         return groceryDatabase.get(random.nextInt(groceryDatabase.size()));
     }
@@ -85,7 +95,7 @@ public class GroceryList {
         groceryDatabase.add(new Grocery("Icecream", "P"));
         groceryDatabase.add(new Grocery("Banana", "F"));
         groceryDatabase.add(new Grocery("Chicken", "ME"));
-        groceryDatabase.add(new Grocery("Salmon", "P"));
+        groceryDatabase.add(new Grocery("Salmon", "FI"));
         groceryDatabase.add(new Grocery("Chocolate", "E"));
         groceryDatabase.add(new Grocery("Sandwitch", "B"));
         groceryDatabase.add(new Grocery("Salad", "V"));

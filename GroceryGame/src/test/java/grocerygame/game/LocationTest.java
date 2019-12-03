@@ -5,6 +5,7 @@
  */
 package grocerygame.game;
 
+import grocerygame.game.models.Location;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,7 +18,7 @@ import static org.junit.Assert.*;
  * @author miika1
  */
 public class LocationTest {
-    
+    private Location location;
     public LocationTest() {
     }
     
@@ -31,15 +32,31 @@ public class LocationTest {
     
     @Before
     public void setUp() {
+        location = new Location();
     }
     
-    @After
-    public void tearDown() {
+    @Test
+    public void constuctorWorks(){
+        assertEquals(0, location.getX());
+        assertEquals(0, location.getY());
     }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    
+    @Test
+    public void setXWorks(){
+        location.setX(50);
+        assertEquals(50, location.getX());   
+    }
+    
+    @Test
+    public void setYWorks(){
+        location.setY(50);
+        assertEquals(50, location.getY());   
+    }
+    
+    @Test
+    public void setLocationWorks(){
+        location.setLocation(50,50);
+        assertEquals(50, location.getY());
+        assertEquals(50, location.getX());
+    }
 }

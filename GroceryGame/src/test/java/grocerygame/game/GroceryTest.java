@@ -5,6 +5,7 @@
  */
 package grocerygame.game;
 
+import grocerygame.game.models.Grocery;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,6 +18,7 @@ import static org.junit.Assert.*;
  * @author miika1
  */
 public class GroceryTest {
+    private Grocery grocery;
     
     public GroceryTest() {
     }
@@ -31,15 +33,21 @@ public class GroceryTest {
     
     @Before
     public void setUp() {
+        grocery = new Grocery("name","category");
     }
     
     @After
     public void tearDown() {
     }
+    
+    @Test
+    public void getCategoryWorks(){
+        assertEquals("category",grocery.getCategory());
+    }
+    
+    @Test
+    public void getNameWorks(){
+        assertEquals("name",grocery.getName());
+    }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
 }

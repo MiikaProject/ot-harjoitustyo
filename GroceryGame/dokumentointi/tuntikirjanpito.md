@@ -13,3 +13,4 @@
 | 29.11.2019     | 3 | uusi rakenne projektille  |25 |
 | 1.12.2019     | 7 | projekti logiikan saattaminen toimivaksi  |32 |
 | 2.12.2019     | 3 | kenttien ja vaikeustasojen luominen |35 |
+| 3.12.2019     | 3 | testit, mvn package, release, sekvenssikaavio |38 |

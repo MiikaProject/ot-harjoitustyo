@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package grocerygame.domain;
+package grocerygame.primaryview.models;
 
 import java.time.ZonedDateTime;
 
@@ -12,13 +12,13 @@ import java.time.ZonedDateTime;
 public class Player {
 
     private String name;
-    private int level;
+    private int difficulty;
     private ZonedDateTime time;
     private int score;
 
-    public Player(String name, int level) {
+    public Player(String name, int difficulty) {
         this.name = name;
-        this.level = level;
+        this.difficulty = difficulty;
         this.time = ZonedDateTime.now();
         this.score = 0;
     }
@@ -31,8 +31,8 @@ public class Player {
         return this.name;
     }
 
-    public int getLevel() {
-        return this.level;
+    public int getDifficulty() {
+        return this.difficulty;
     }
 
     public boolean setScore(int score) {

@@ -76,9 +76,7 @@ public class Cell {
     }
 
     public Node getImage() {
-
         CellView view = new CellView(this);
-
         return view.cellImage();
 
     }

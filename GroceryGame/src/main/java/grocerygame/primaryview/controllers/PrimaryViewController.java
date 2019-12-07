@@ -1,0 +1,53 @@
+package grocerygame.primaryview.controllers;
+
+import grocerygame.primaryview.models.Player;
+import grocerygame.game.views.GameView;
+import grocerygame.primaryview.views.SettingsView;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.stage.Stage;
+
+//Controller for the PrimaryView
+public class PrimaryViewController {
+
+    private Stage window;
+
+    public PrimaryViewController(Stage window) {
+        this.window = window;
+    }
+
+    //Launch game
+    public void changeToGame(Player player) {
+        GameView game = new GameView(player, window);
+        window.setScene(game.getView());
+        window.show();
+    }
+    
+    
+    //Method called when "Play" button is pressed, validates input then
+    //changes to game
+    public void startGame(SettingsView settings) {
+        TextField userField = settings.getUserField();
+        Label errorField = settings.getErrorField();
+        ToggleGroup difficulty = settings.getDifficulty();
+
+        //validate username
+        if (userField.getText().equals("")) {
+            errorField.setText("Give player name!");
+            return;
+        } else if (difficulty.getSelectedToggle() == null) {
+            errorField.setText("Set difficulty!");
+            return;
+        } else {
+            String playername = userField.getText();
+            ToggleButton chosen = (ToggleButton) difficulty.getSelectedToggle();
+            int chosenDifficulty = Integer.parseInt(chosen.getText());
+            Player player = new Player(playername, chosenDifficulty);
+            changeToGame(player);
+        }
+
+    }
+}

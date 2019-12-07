@@ -5,6 +5,7 @@
  */
 package grocerygame.domain;
 
+import grocerygame.primaryview.models.Player;
 import com.sun.org.apache.xerces.internal.impl.dv.xs.DateTimeDV;
 import java.sql.JDBCType;
 import java.time.LocalDate;
@@ -56,7 +57,7 @@ public class PlayerTest {
     
     @Test 
     public void getPlayerLevel(){
-        assertEquals(1, player.getLevel());
+        assertEquals(1, player.getDifficulty());
     }
     
     @Test

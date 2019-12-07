@@ -1,6 +1,7 @@
 
 package grocerygame.game.views;
 
+import grocerygame.primaryview.models.Player;
 import grocerygame.game.controllers.GameController;
 import grocerygame.game.models.GameGrid;
 import grocerygame.game.models.GroceryList;
@@ -22,9 +23,9 @@ public class GameView {
     private Stage window;
 
     //Build view
-    public GameView(String player, int difficulty, Stage window) {
-        this.player = player;
-        this.difficulty = difficulty;
+    public GameView(Player player, Stage window) {
+        this.player = player.getName();
+        this.difficulty = player.getDifficulty();
         this.window = window;
 
         //Set up grid for the window

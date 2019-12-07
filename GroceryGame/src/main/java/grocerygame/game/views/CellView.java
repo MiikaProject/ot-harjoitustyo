@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grocerygame.game.views;
 
 import grocerygame.game.models.Cell;
@@ -10,10 +5,9 @@ import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-/**
- *
- * @author miika1
- */
+
+//CellView turns Cell into actual rendeable javafx object. Color of the 
+//cell is based on the type of the cell.
 public class CellView {
 
     private Cell cell;

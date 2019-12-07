@@ -1,31 +1,30 @@
-
 package grocerygame.game.views;
 
 import grocerygame.primaryview.models.Player;
 import grocerygame.game.controllers.GameController;
 import grocerygame.game.models.GameGrid;
 import grocerygame.game.models.GroceryList;
+import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
 
-
-
 //The main view of the GameWindow, it holds other smaller views such as
 // GameDisplay, GroceryList,OptionsPanel
 public class GameView {
 
-    private String player;
-    private int difficulty;
+    private Player player;
     private Scene game;
     private Stage window;
+    private AnimationTimer animation;
+    private GameDisplay gamefield;
+    private GroceryListView listItems;
 
     //Build view
     public GameView(Player player, Stage window) {
-        this.player = player.getName();
-        this.difficulty = player.getDifficulty();
+        this.player = player;
         this.window = window;
 
         //Set up grid for the window
@@ -47,31 +46,61 @@ public class GameView {
         layout.add(options.getOptions(), 0, 0);
 
         //"Grocerylist"
-        GroceryList grocerylist = new GroceryList(this.difficulty);
-        GroceryListView listItems = new GroceryListView(grocerylist);
+        GroceryList grocerylist = new GroceryList(player.getDifficulty());
+        listItems = new GroceryListView(grocerylist);
         layout.add(listItems.getView(), 1, 1);
-        
+
         //The actual game
-        GameDisplay gamefield = new GameDisplay(new GameGrid(20, 20, grocerylist));
-        
+        gamefield = new GameDisplay(new GameGrid(20, 20, grocerylist));
+
         layout.add(gamefield.getView(), 0, 1);
-        
-        
+
         //Legend for shelves
         GroceryTipsView guide = new GroceryTipsView();
-        
+
         layout.add(guide.getGuide(), 1, 0);
-        
+
         game = new Scene(layout, 400, 400);
-        GameController gamecontroller = new GameController(gamefield, listItems, window);
+        GameController gamecontroller = new GameController(this);
         game.setOnKeyPressed(event -> gamecontroller.handleKeyPress(event));
         options.setController(gamecontroller);
+
+        animation = new AnimationTimer() {
+            long previous;
+
+            @Override
+            public void handle(long now) {
+                if (now - previous < 10000) {
+                    return;
+                }
+                gamecontroller.refreshView();
+
+                this.previous = now;
+            }
+        };
+
+        animation.start();
     }
 
-    //get gameview
+    
     public Scene getView() {
-
         return game;
+    }
+
+    public AnimationTimer getAnimation() {
+        return animation;
+    }
+
+    public GameDisplay getGamefield() {
+        return gamefield;
+    }
+
+    public GroceryListView getListItems() {
+        return listItems;
+    }
+
+    public Stage getWindow() {
+        return window;
     }
 
 }

@@ -5,7 +5,6 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 
-
 //GameDisplay renders GameGrid.
 public class GameDisplay {
 
@@ -29,23 +28,19 @@ public class GameDisplay {
     }
 
     public Node getView() {
-
         return gameview;
     }
 
     public GameGrid getGrid() {
         return this.gamegrid;
     }
-    
-    
+
     public Node redrawGrid() {
         for (int i = 0; i < gamegrid.grid.length; i++) {
             for (int j = 0; j < gamegrid.grid[i].length; j++) {
-
                 gameview.add(gamegrid.grid[i][j].getImage(), j, i);
             }
         }
-
         return gameview;
     }
 }

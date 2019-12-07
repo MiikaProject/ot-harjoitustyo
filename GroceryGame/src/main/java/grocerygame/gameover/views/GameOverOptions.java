@@ -10,10 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-/**
- *
- * @author miika1
- */
+
+//OptionsPanel for game end. Buttons for returning to main page and exiting
+// game.
 public class GameOverOptions {
 
     HBox options;
@@ -45,7 +44,8 @@ public class GameOverOptions {
     public Button getExit() {
         return quit;
     }
-
+    
+    
     public void setController(GameOverController controller) {
         this.gameovercontroller = controller;
         quit.setOnAction(event -> gameovercontroller.changeToPrimaryView(event));

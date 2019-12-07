@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package grocerygame.game.views;
 
 import grocerygame.game.controllers.GameController;
@@ -14,10 +10,10 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
 
-/**
- *
- * @author miika1
- */
+
+
+//The main view of the GameWindow, it holds other smaller views such as
+// GameDisplay, GroceryList,OptionsPanel
 public class GameView {
 
     private String player;

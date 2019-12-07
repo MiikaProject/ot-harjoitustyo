@@ -10,10 +10,7 @@ import grocerygame.game.models.GroceryList;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
-/**
- *
- * @author miika1
- */
+//View that renders the shopping list
 public class GroceryListView {
 
     private GroceryList grocerylist;
@@ -27,6 +24,9 @@ public class GroceryListView {
 
     public void createView() {
         list.getChildren().clear();
+        
+        //If list is empty, show message to go to cashier, if not show
+        //remaining items.
         if (grocerylist.getGrocerylist().isEmpty()) {
             list.getChildren().add(new Label("Cashier next!"));
         } else {

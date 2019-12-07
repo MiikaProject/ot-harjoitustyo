@@ -13,10 +13,8 @@ import javafx.stage.Stage;
 import grocerygame.game.views.OptionsPanel;
 import grocerygame.gameover.controllers.GameOverController;
 
-/**
- *
- * @author miika1
- */
+
+//The main window for GameOver
 public class GameOverView {
 
     private Scene gameover;
@@ -26,6 +24,8 @@ public class GameOverView {
         this.window = window;
         BorderPane layout = new BorderPane();
         layout.setCenter(new Label("GAME OVER"));
+        
+        //Create optionPanel and give it to gameovercontroller
         GameOverOptions options = new GameOverOptions(window);
         options.setController(new GameOverController(window));
         layout.setTop(options.getOptions());

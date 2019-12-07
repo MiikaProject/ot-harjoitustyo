@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grocerygame.game.views;
 
 import grocerygame.game.models.GameGrid;
@@ -10,10 +5,8 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 
-/**
- *
- * @author miika1
- */
+
+//GameDisplay renders GameGrid.
 public class GameDisplay {
 
     private Scene game;
@@ -35,7 +28,6 @@ public class GameDisplay {
 
     }
 
-    //get gameview
     public Node getView() {
 
         return gameview;
@@ -44,7 +36,8 @@ public class GameDisplay {
     public GameGrid getGrid() {
         return this.gamegrid;
     }
-
+    
+    
     public Node redrawGrid() {
         for (int i = 0; i < gamegrid.grid.length; i++) {
             for (int j = 0; j < gamegrid.grid[i].length; j++) {

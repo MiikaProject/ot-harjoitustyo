@@ -7,10 +7,8 @@ package grocerygame.domain;
 
 import java.time.ZonedDateTime;
 
-/**
- *
- * @author miika
- */
+
+//Player class represents user of the game
 public class Player {
 
     private String name;

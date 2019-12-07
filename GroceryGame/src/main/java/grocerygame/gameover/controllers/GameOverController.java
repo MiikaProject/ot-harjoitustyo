@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package grocerygame.gameover.controllers;
 
 import grocerygame.primaryview.views.PrimaryView;
@@ -11,10 +7,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 
-/**
- *
- * @author miika1
- */
+
+//Controller to handle action that happen after game ends
 public class GameOverController {
 
     private Stage window;

@@ -17,10 +17,8 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
-/**
- *
- * @author miika
- */
+
+//Gamecontroller handles events that happen in the GameView View
 public class GameController {
 
     private GameGrid gamegrid;

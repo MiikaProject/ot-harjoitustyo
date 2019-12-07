@@ -1,16 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grocerygame.game.models;
 
-import sun.misc.ObjectInputFilter;
-
-/**
- *
- * @author miika1
- */
+// GameGrid holds the location of different objects in the game
 public class GameGrid {
 
     public Cell[][] grid;
@@ -21,18 +11,21 @@ public class GameGrid {
     public GameGrid(int x, int y, GroceryList groceryList) {
         grid = new Cell[y][x];
         this.grocerylist = groceryList;
-
+        
+        //Set all cells empty
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
                 grid[i][j] = new Cell(i, j);
             }
 
         }
-
+        
+        //Create the player, add it to bottom right corner
         shopper = new Location();
         grid[y - 1][x - 1].setCellType("S");
         shopper.setLocation(y - 1, x - 1);
-
+        
+        //Set up the level (only 1 level available currently)
         levelOne();
 
     }
@@ -139,6 +132,10 @@ public class GameGrid {
     }
 
     private boolean checkCell(int y, int x) {
+        //Check if cell is shelf, then if grocerylist contains item from that
+        //shelf remove it from grocerylist. If list is empty and cell is cashier
+        //end game.
+        
         if (grid[y][x].getType().equals("M") | grid[y][x].getType().equals("P") | grid[y][x].getType().equals("L") | grid[y][x].getType().equals("F") | grid[y][x].getType().equals("R") | grid[y][x].getType().equals("B")
                 | grid[y][x].getType().equals("C") | grid[y][x].getType().equals("E") | grid[y][x].getType().equals("V") | grid[y][x].getType().equals("D") | grid[y][x].getType().equals("ME")
                 | grid[y][x].getType().equals("FI") | grid[y][x].getType().equals("H")) {
@@ -155,7 +152,6 @@ public class GameGrid {
                 grocerylist.remove(itemToBeRemove);
             } else {
                 if (grid[y][x].getType().equals("C")) {
-                    //System.out.println("DONE!");
                     gameover = true;
                 }
             }

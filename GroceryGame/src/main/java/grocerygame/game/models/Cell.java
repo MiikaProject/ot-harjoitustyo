@@ -1,18 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grocerygame.game.models;
 
 import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-/**
- *
- * @author miika1
- */
+
+//Cell class is the building block of the gamegrid, it represents 
+// every unit in the game
 public class Cell {
 
     private String type;

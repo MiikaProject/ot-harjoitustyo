@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grocerygame.game.models;
 
-/**
- *
- * @author miika1
- */
+// Grocery is a object which the player has to collect in the game
 public class Grocery {
 
     private String name;

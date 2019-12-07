@@ -1,17 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grocerygame.game.models;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- *
- * @author miika1
- */
+
+//GroceryList holds the collection of different groceies and creates 
+// random shopping list for player. The number of items on list changes
+// depending on the difficulty of the game
 public class GroceryList {
 
     private ArrayList<Grocery> grocerylist;

@@ -1,18 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package grocerygame.game.views;
 
 import grocerygame.game.controllers.GameController;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 
-/**
- *
- * @author miika1
- */
+
+//Options panel shows buttons for quitting game and returning to main page
 public class OptionsPanel {
 
     HBox options;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package grocerygame.domain;
+package grocerygame.primaryview;
 
 import grocerygame.primaryview.models.Player;
 import com.sun.org.apache.xerces.internal.impl.dv.xs.DateTimeDV;
@@ -28,13 +28,6 @@ public class PlayerTest {
     public PlayerTest() {
     }
 
-    @BeforeClass
-    public static void setUpClass() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
 
     @Before
     public void setUp() {
@@ -45,11 +38,6 @@ public class PlayerTest {
     public void tearDown() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
     @Test
     public void getPlayerName() {
         assertEquals("Pelaaja", player.getName());
@@ -65,7 +53,6 @@ public class PlayerTest {
 
         long erotus = ZonedDateTime.now().toEpochSecond() - player.getTime().toEpochSecond();
         boolean arvo = (erotus < 100);
-
         assertEquals(true, arvo);
 
     }

@@ -10,7 +10,7 @@ Sovellus on peli, jossa pelaaja liikuttaa kaupassa hahmoa keräten ostoslistalla
 * Pelaa voi valita vaikeustason, jonka perusteella määritetään kuinka monta esinettä hänen tulee kerätä &#9745;
 * Taso 1 = 3 esinettä, Taso 2 = 5 esinettä, Taso 3 = 7 esinettä &#9745;
 * Perusversio toimii paikallisesti käyttäjän omalla koneella &#9745;
-* Tulokset talletetaan paikallisesti tietokantaan/tiedostoon &#9745;
+* Tulokset talletetaan paikallisesti tietokantaan &#9745;
 
 
 ## Käyttöliittymäluonnos

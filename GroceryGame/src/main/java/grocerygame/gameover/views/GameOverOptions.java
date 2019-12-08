@@ -6,10 +6,11 @@
 package grocerygame.gameover.views;
 
 import grocerygame.gameover.controllers.GameOverController;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-
 
 //OptionsPanel for game end. Buttons for returning to main page and exiting
 // game.
@@ -44,11 +45,17 @@ public class GameOverOptions {
     public Button getExit() {
         return quit;
     }
-    
-    
+
     public void setController(GameOverController controller) {
         this.gameovercontroller = controller;
-        quit.setOnAction(event -> gameovercontroller.changeToPrimaryView(event));
+
+        quit.setOnAction(event -> {
+            try {
+                gameovercontroller.changeToPrimaryView();
+            } catch (Exception ex) {
+                Logger.getLogger(GameOverOptions.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
         exit.setOnAction(event -> gameovercontroller.exitGame(event));
     }
 }

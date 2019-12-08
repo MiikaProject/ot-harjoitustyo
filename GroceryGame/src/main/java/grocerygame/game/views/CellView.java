@@ -5,7 +5,6 @@ import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-
 //CellView turns Cell into actual rendeable javafx object. Color of the 
 //cell is based on the type of the cell.
 public class CellView {

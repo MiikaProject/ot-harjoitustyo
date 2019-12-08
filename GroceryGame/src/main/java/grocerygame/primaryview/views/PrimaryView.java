@@ -5,19 +5,9 @@
  */
 package grocerygame.primaryview.views;
 
-import grocerygame.primaryview.models.Player;
-import grocerygame.game.views.GameView;
 import grocerygame.primaryview.controllers.PrimaryViewController;
-import javafx.event.ActionEvent;
-import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 //The main page
@@ -27,7 +17,7 @@ public class PrimaryView {
     private Stage window;
     PrimaryViewController controller;
 
-    public PrimaryView(Stage window) {
+    public PrimaryView(Stage window) throws Exception {
 
         this.window = window;
         controller = new PrimaryViewController(this.window);

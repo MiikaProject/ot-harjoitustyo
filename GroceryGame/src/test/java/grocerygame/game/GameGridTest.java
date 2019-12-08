@@ -9,6 +9,7 @@ import grocerygame.game.models.Cell;
 import grocerygame.game.models.GameGrid;
 import grocerygame.game.models.GroceryList;
 import grocerygame.game.models.Location;
+import grocerygame.primaryview.models.Player;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -38,7 +39,7 @@ public class GameGridTest {
     @Before
     public void setUp() {
         grocerylist = new GroceryList(1);
-        gamegrid = new GameGrid(20, 20, grocerylist);
+        gamegrid = new GameGrid(20, 20, grocerylist,new Player("tester", 1));
         
     }
     

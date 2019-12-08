@@ -24,7 +24,7 @@ public class GroceryListView {
 
     public void createView() {
         list.getChildren().clear();
-        
+
         //If list is empty, show message to go to cashier, if not show
         //remaining items.
         if (grocerylist.getGrocerylist().isEmpty()) {

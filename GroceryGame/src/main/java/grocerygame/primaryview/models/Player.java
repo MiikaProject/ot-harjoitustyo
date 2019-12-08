@@ -6,21 +6,43 @@
 package grocerygame.primaryview.models;
 
 import java.time.ZonedDateTime;
-
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 
 //Player class represents user of the game
-public class Player {
+@DatabaseTable(tableName = "players")
+public class Player implements Comparable<Player> {
 
+    @DatabaseField(id = true)
+    private Integer id;
+    @DatabaseField()
     private String name;
+    @DatabaseField()
     private int difficulty;
+    @DatabaseField()
+    private int finalScore;
+
+    private Score score;
+
     private ZonedDateTime time;
-    private int score;
+
+    public Player() {
+    }
 
     public Player(String name, int difficulty) {
         this.name = name;
         this.difficulty = difficulty;
         this.time = ZonedDateTime.now();
-        this.score = 0;
+        this.score = new Score(difficulty);
+        this.finalScore = 0;
+    }
+
+    public Player(String name, int difficulty, int score) {
+        this.name = name;
+        this.difficulty = difficulty;
+        this.score = new Score(difficulty);
+        this.time = ZonedDateTime.now();
+        this.finalScore = 0;
     }
 
     public ZonedDateTime getTime() {
@@ -35,18 +57,26 @@ public class Player {
         return this.difficulty;
     }
 
-    public boolean setScore(int score) {
-        if (score < 0) {
-            return false;
-        } else {
-            this.score = score;
-            return true;
-        }
-
+    public Score getScore() {
+        return this.score;
     }
 
-    public int getScore() {
-        return this.score;
+    public void calculateFinalScore() {
+        this.finalScore = getScore().calculateScore();
+    }
+
+    @Override
+    public String toString() {
+        return "name:" + this.name + "::" + "difficulty:" + this.difficulty + "::" + "score:" + this.finalScore;
+    }
+
+    @Override
+    public int compareTo(Player player) {
+        return player.getFinalScore() - this.finalScore;
+    }
+
+    public int getFinalScore() {
+        return finalScore;
     }
 
 }

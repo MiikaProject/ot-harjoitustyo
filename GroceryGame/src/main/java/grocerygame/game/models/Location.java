@@ -1,6 +1,5 @@
 package grocerygame.game.models;
 
-
 //Location holds the x and y coordinates, it is used to hold the Player-icon
 // location. 
 public class Location {

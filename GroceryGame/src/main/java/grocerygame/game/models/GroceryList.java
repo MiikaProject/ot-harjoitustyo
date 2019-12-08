@@ -3,7 +3,6 @@ package grocerygame.game.models;
 import java.util.ArrayList;
 import java.util.Random;
 
-
 //GroceryList holds the collection of different groceies and creates 
 // random shopping list for player. The number of items on list changes
 // depending on the difficulty of the game

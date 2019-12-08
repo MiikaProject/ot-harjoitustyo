@@ -6,8 +6,6 @@ public class Grocery {
     private String name;
     private String category;
 
-
-
     public Grocery(String name, String category) {
         this.name = name;
         this.category = category;
@@ -25,9 +23,5 @@ public class Grocery {
     public String getName() {
         return name;
     }
-
-    
-    
-    
 
 }

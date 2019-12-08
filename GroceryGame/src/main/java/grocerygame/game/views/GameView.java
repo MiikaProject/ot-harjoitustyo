@@ -4,6 +4,8 @@ import grocerygame.primaryview.models.Player;
 import grocerygame.game.controllers.GameController;
 import grocerygame.game.models.GameGrid;
 import grocerygame.game.models.GroceryList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
 import javafx.scene.layout.ColumnConstraints;
@@ -21,9 +23,10 @@ public class GameView {
     private AnimationTimer animation;
     private GameDisplay gamefield;
     private GroceryListView listItems;
+    private TimeLeftView timeleft;
 
     //Build view
-    public GameView(Player player, Stage window) {
+    public GameView(Player player, Stage window) throws Exception {
         this.player = player;
         this.window = window;
 
@@ -45,13 +48,17 @@ public class GameView {
 
         layout.add(options.getOptions(), 0, 0);
 
+        //Counter for remaining time
+        timeleft = new TimeLeftView();
+        layout.add(timeleft.getView(), 1, 1);
+
         //"Grocerylist"
         GroceryList grocerylist = new GroceryList(player.getDifficulty());
         listItems = new GroceryListView(grocerylist);
         layout.add(listItems.getView(), 1, 1);
 
         //The actual game
-        gamefield = new GameDisplay(new GameGrid(20, 20, grocerylist));
+        gamefield = new GameDisplay(new GameGrid(20, 20, grocerylist, player));
 
         layout.add(gamefield.getView(), 0, 1);
 
@@ -67,13 +74,21 @@ public class GameView {
 
         animation = new AnimationTimer() {
             long previous;
+            long startTime = System.currentTimeMillis();
 
             @Override
             public void handle(long now) {
                 if (now - previous < 10000) {
                     return;
                 }
-                gamecontroller.refreshView();
+                long elapsedTime = System.currentTimeMillis() - startTime;
+
+                try {
+                    gamecontroller.refreshView(elapsedTime);
+
+                } catch (Exception ex) {
+                    Logger.getLogger(GameView.class.getName()).log(Level.SEVERE, null, ex);
+                }
 
                 this.previous = now;
             }
@@ -82,7 +97,6 @@ public class GameView {
         animation.start();
     }
 
-    
     public Scene getView() {
         return game;
     }
@@ -101,6 +115,14 @@ public class GameView {
 
     public Stage getWindow() {
         return window;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public TimeLeftView getTimeleft() {
+        return timeleft;
     }
 
 }

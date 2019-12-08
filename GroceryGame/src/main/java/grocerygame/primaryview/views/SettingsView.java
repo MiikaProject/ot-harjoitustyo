@@ -17,7 +17,7 @@ public class SettingsView {
     private TextField userField;
     private ToggleGroup difficulty;
     private Label errorField;
-    
+
     public SettingsView() {
 
         Label settingsTitle = new Label("Settings");
@@ -64,15 +64,5 @@ public class SettingsView {
     public Label getErrorField() {
         return errorField;
     }
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
 
 }

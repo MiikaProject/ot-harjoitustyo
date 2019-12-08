@@ -4,6 +4,7 @@ import grocerygame.game.models.GameGrid;
 import grocerygame.game.views.GameDisplay;
 import grocerygame.game.views.GameView;
 import grocerygame.game.views.GroceryListView;
+import grocerygame.game.views.TimeLeftView;
 import grocerygame.gameover.views.GameOverView;
 import grocerygame.primaryview.views.PrimaryView;
 import javafx.application.Platform;
@@ -20,16 +21,18 @@ public class GameController {
     private GameDisplay gameDisplay;
     private GameView gameview;
     private GroceryListView grocerylistview;
+    private TimeLeftView timeleft;
     private boolean gameover;
     private Stage window;
 
     public GameController(GameView gameview) {
-        
+
         this.gameview = gameview;
         this.gameDisplay = gameview.getGamefield();
         this.gamegrid = gameDisplay.getGrid();
         this.grocerylistview = gameview.getListItems();
         this.window = gameview.getWindow();
+        this.timeleft = gameview.getTimeleft();
 
     }
 
@@ -48,26 +51,32 @@ public class GameController {
 
     }
 
-    public void refreshView() {
+    public void refreshView(long timeSpendInGame) throws Exception {
         if (gamegrid.gameover() == true) {
+            changeToGameOver();
+        }
+
+        gameview.getPlayer().getScore().updateTime(timeSpendInGame);
+        if (gameview.getPlayer().getScore().timeOver()) {
             changeToGameOver();
         }
         gameDisplay.redrawGrid();
         grocerylistview.createView();
 
+        timeleft.refreshTimeLeft(timeSpendInGame);
+
     }
 
     //method to return back to primaryview
-    public void changeToPrimaryView(ActionEvent event) {
+    public void changeToPrimaryView(ActionEvent event) throws Exception {
 
         PrimaryView primaryview = new PrimaryView(window);
-        window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(primaryview.getView());
         window.show();
     }
 
-    public void changeToGameOver() {
-        GameOverView gameoverview = new GameOverView(window);
+    public void changeToGameOver() throws Exception {
+        GameOverView gameoverview = new GameOverView(window, gameview.getPlayer());
         gameview.getAnimation().stop();
         window.setScene(gameoverview.getView());
 

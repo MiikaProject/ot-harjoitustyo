@@ -22,24 +22,25 @@ import static org.junit.Assert.*;
  * @author miika
  */
 public class PlayerTest {
+
     private Player player;
-    
+
     public PlayerTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
-        player = new Player("Pelaaja",1);
+        player = new Player("Pelaaja", 1);
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -49,52 +50,24 @@ public class PlayerTest {
     //
     // @Test
     // public void hello() {}
-    
     @Test
-    public void getPlayerName(){
+    public void getPlayerName() {
         assertEquals("Pelaaja", player.getName());
     }
-    
-    @Test 
-    public void getPlayerLevel(){
+
+    @Test
+    public void getPlayerLevel() {
         assertEquals(1, player.getDifficulty());
     }
-    
+
     @Test
-    public void getTime(){
-        
-        long erotus = ZonedDateTime.now().toEpochSecond()-player.getTime().toEpochSecond();
+    public void getTime() {
+
+        long erotus = ZonedDateTime.now().toEpochSecond() - player.getTime().toEpochSecond();
         boolean arvo = (erotus < 100);
-        
-        assertEquals(true,arvo);
-        
+
+        assertEquals(true, arvo);
+
     }
-    
-    @Test
-    public void negativeScoreNotAllowed(){
-        boolean response = player.setScore(-50);
-        
-        assertEquals(false, response);
-        
-    }
-    
-    @Test
-    public void positiveScoreWorks(){
-        boolean response = player.setScore(50);
-        assertEquals(true, response);
-    }
-    
-    
-    @Test
-    public void returnPositiveScoreCorrectly(){
-        player.setScore(50);
-        assertEquals(50, player.getScore());
-    }
-    
-    @Test
-    public void negativeSetScoreDoesNotChangeScore(){
-        player.setScore(-50);
-        assertEquals(0, player.getScore());
-    }
-    
+
 }

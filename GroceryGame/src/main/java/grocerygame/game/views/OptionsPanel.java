@@ -1,10 +1,10 @@
-
 package grocerygame.game.views;
 
 import grocerygame.game.controllers.GameController;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
-
 
 //Options panel shows buttons for quitting game and returning to main page
 public class OptionsPanel {
@@ -39,7 +39,13 @@ public class OptionsPanel {
 
     public void setController(GameController controller) {
         this.gamecontroller = controller;
-        quit.setOnAction(event -> gamecontroller.changeToPrimaryView(event));
+        quit.setOnAction(event -> {
+            try {
+                gamecontroller.changeToPrimaryView(event);
+            } catch (Exception ex) {
+                Logger.getLogger(OptionsPanel.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
         exit.setOnAction(event -> gamecontroller.exitGame(event));
     }
 

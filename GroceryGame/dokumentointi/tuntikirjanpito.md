@@ -14,3 +14,5 @@
 | 1.12.2019     | 7 | projekti logiikan saattaminen toimivaksi  |32 |
 | 2.12.2019     | 3 | kenttien ja vaikeustasojen luominen |35 |
 | 3.12.2019     | 3 | testit, mvn package, release, sekvenssikaavio |38 |
+| 7.12.2019     | 8 | sovelluslogiikkaa, projektin rakenteen korjaamista,tietokannan käyttöönotto |46 |
+| 8.12.2019     | 4 | pistelaskun kehittely, laskuri peliin, tulosten tallennus |50 |

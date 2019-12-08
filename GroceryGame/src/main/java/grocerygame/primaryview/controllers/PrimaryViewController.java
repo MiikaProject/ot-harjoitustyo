@@ -30,28 +30,23 @@ public class PrimaryViewController {
 
     //Method called when "Play" button is pressed, validates input then
     //changes to game
-    public void startGame(SettingsView settings) {
+    public void startGame(SettingsView settings) throws Exception {
         TextField userField = settings.getUserField();
         Label errorField = settings.getErrorField();
         ToggleGroup difficulty = settings.getDifficulty();
 
-        //validate username
+        //validate username and difficulty
         if (userField.getText().equals("")) {
             errorField.setText("Give player name!");
-            return;
         } else if (difficulty.getSelectedToggle() == null) {
             errorField.setText("Set difficulty!");
-            return;
         } else {
             String playername = userField.getText();
             ToggleButton chosen = (ToggleButton) difficulty.getSelectedToggle();
             int chosenDifficulty = Integer.parseInt(chosen.getText());
             Player player = new Player(playername, chosenDifficulty);
-            try {
-                changeToGame(player);
-            } catch (Exception ex) {
-                Logger.getLogger(PrimaryViewController.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            changeToGame(player);
+
         }
 
     }

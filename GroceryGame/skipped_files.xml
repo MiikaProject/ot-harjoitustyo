@@ -8,6 +8,7 @@
     <suppress files="grocerygame.primaryview.views.PrimaryView.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="grocerygame.game.views.GameDisplay.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="grocerygame.game.views.GameView.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="grocerygame.game.views.CellView.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="grocerygame.game.views.GroceryListView.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="grocerygame.game.views.GroceryTipsView.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="grocerygame.game.views.OptionsPanel.java" checks="[a-zA-Z0-9]*"/>

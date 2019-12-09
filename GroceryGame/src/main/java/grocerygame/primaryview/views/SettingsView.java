@@ -1,6 +1,8 @@
 package grocerygame.primaryview.views;
 
 import grocerygame.primaryview.controllers.PrimaryViewController;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -48,9 +50,15 @@ public class SettingsView {
         return this.settings;
     }
 
-    public void setController(PrimaryViewController controller) {
+    public void setController(PrimaryViewController controller)  {
         this.controller = controller;
-        play.setOnAction(event -> controller.startGame(this));
+        play.setOnAction(event -> {
+            try {
+                controller.startGame(this);
+            } catch (Exception ex) {
+                Logger.getLogger(SettingsView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
     }
 
     public TextField getUserField() {

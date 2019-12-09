@@ -11,6 +11,14 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
+/**
+ * 
+ * SettingsView class generates UI in which user can choose his player name 
+ * and difficulty of the game before starting the game
+ */
+
+
+
 public class SettingsView {
 
     private VBox settings;
@@ -46,10 +54,18 @@ public class SettingsView {
         settings.setSpacing(10);
     }
 
+    /**
+     * 
+     * getView() method return a VBox javafx component containing the UI
+     */
     public VBox getView() {
         return this.settings;
     }
 
+    /**
+     * setController() is used to set controller to the SettingsView panel
+     * 
+     */
     public void setController(PrimaryViewController controller)  {
         this.controller = controller;
         play.setOnAction(event -> {
@@ -61,14 +77,32 @@ public class SettingsView {
         });
     }
 
+    /**
+     * getUserField() method returns the userField javafx TextField component. This method 
+     * is used by the controller to get access of the TextField.
+     * 
+     */
+    
     public TextField getUserField() {
         return userField;
     }
+    
+    /**
+     * Method returns the difficulty ToggleGroup. The togglegroup is used to 
+     * choose difficulty of the game before entering the game. Method is used by the controller
+     * to get access to the togglegroup.
+     * 
+     */
 
     public ToggleGroup getDifficulty() {
         return difficulty;
     }
 
+    /**
+     * Method is used by the controller to get access of the Label "ErrorField". Errorfield is used to 
+     * display validation errors.
+     * 
+     */
     public Label getErrorField() {
         return errorField;
     }

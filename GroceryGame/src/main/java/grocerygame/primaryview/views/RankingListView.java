@@ -7,8 +7,13 @@ import java.util.List;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
-//RankingListView displays ranking list of player who have played the game so
-// far
+
+/**
+ * RankingListView displays ranking list of player who have played the game so
+ * far. If there is more than 5 players, it only shows the top5 scoring players.
+ * 
+ */
+
 public class RankingListView {
 
     private VBox rankingList;
@@ -46,6 +51,10 @@ public class RankingListView {
 
     }
 
+    /**
+     * Returns the view of the rankingList as VBox javafx component.
+     * 
+     */
     public VBox getView() {
         return rankingList;
     }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grocerygame.primaryview.views;
 
 import grocerygame.primaryview.controllers.PrimaryViewController;
@@ -10,7 +5,12 @@ import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-//The main page
+/**
+ * PrimaryView is the main page of the application. It is used to display the ranking list
+ * of previous players and settings panel in which player can insert his/her name and preferred
+ * difficulty before the game starts.
+ * 
+ */
 public class PrimaryView {
 
     private Scene view;
@@ -34,6 +34,10 @@ public class PrimaryView {
         view = new Scene(grid, 400, 400);
     }
 
+    /**
+     * Returns the PrimaryView page as javafx Scene object.
+     * 
+     */
     public Scene getView() {
         return view;
     }

@@ -1,7 +1,14 @@
 package grocerygame.primaryview.models;
 
-//Score handles counting how many items player collected and how much time
-//he/she had remaining at the end and calculates score
+
+
+/**
+ * Score handles counting how many items player collected and how much time
+ * he/she had remaining at the end of the game. Then score is calculated by those variables
+ * and extra score will be rewarded if player made it to cashier before time ended.
+ * 
+ */
+
 public class Score {
 
     private int items;

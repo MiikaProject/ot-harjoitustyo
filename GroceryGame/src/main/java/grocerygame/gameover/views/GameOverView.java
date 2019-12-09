@@ -1,19 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grocerygame.gameover.views;
 
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import grocerygame.gameover.controllers.GameOverController;
 import grocerygame.primaryview.models.Player;
 import javafx.scene.layout.GridPane;
 
-//The main window for GameOver
+/**
+ * GameOverView displays score at the end of the game and contains options
+ * panel which allows player to return to main window or exit the game.
+ * 
+ */
 public class GameOverView {
 
     private Scene gameover;
@@ -37,15 +34,26 @@ public class GameOverView {
         gameover = new Scene(layout, 400, 400);
 
     }
-
+    /**
+     * Method returns the view.
+     * @return the GameOverView as Scene JavaJX object
+     */
     public Scene getView() {
         return gameover;
     }
-
+    
+    /**
+     * Method gives access to the Stage.
+     * @return returns the stage object.
+     */
     public Stage getWindow() {
         return window;
     }
-
+    
+    /**
+     * Method gives access to the current Player.
+     * @return returns current Player object.
+     */
     public Player getPlayer() {
         return player;
     }

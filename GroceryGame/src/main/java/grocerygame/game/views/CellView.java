@@ -5,8 +5,12 @@ import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-//CellView turns Cell into actual rendeable javafx object. Color of the 
-//cell is based on the type of the cell.
+
+/**
+ * CellView turns Cell into actual rendeable javafx object. Color of the 
+ * cell is based on the type of the cell.
+ * @author miika1
+ */
 public class CellView {
 
     private Cell cell;
@@ -14,7 +18,11 @@ public class CellView {
     public CellView(Cell cell) {
         this.cell = cell;
     }
-
+    
+    /**
+     * The method creates a different color JavaFX rectangle based on the type of the Cell.
+     * @return returns Rectangle in different colors matching cell type.
+     */
     public Node cellImage() {
 
         String type = cell.getType();

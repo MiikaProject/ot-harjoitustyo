@@ -5,7 +5,12 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-//GroceryTipsView shows the color labels for different shelves
+
+
+/**
+ * GroceryTipsView shows the color labels for different shelves in the GameView.
+ * 
+ */
 public class GroceryTipsView {
 
     private GridPane guide;
@@ -82,7 +87,10 @@ public class GroceryTipsView {
         guide.add(CashierColor, 1, 11);
 
     }
-
+    
+    /**
+     * Method returns the legend as GridPane.
+     */
     public GridPane getGuide() {
         return guide;
     }

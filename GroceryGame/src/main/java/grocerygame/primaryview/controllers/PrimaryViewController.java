@@ -3,16 +3,16 @@ package grocerygame.primaryview.controllers;
 import grocerygame.primaryview.models.Player;
 import grocerygame.game.views.GameView;
 import grocerygame.primaryview.views.SettingsView;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
-//Controller for the PrimaryView
+/**
+ * PrimaryViewController is a controller class for the PrimaryView window
+ * 
+ */
 public class PrimaryViewController {
 
     private Stage window;
@@ -21,15 +21,25 @@ public class PrimaryViewController {
         this.window = window;
     }
 
-    //Launch game
+    /**
+     * Method is called when the change from PrimaryView to GameView is done.
+     * @param player Current Player as argument
+     * 
+     */
     public void changeToGame(Player player) throws Exception {
         GameView game = new GameView(player, window);
         window.setScene(game.getView());
         window.show();
     }
 
-    //Method called when "Play" button is pressed, validates input then
-    //changes to game
+
+    /**
+     * Method is called when player has pressed "Play" button. First method validates
+     * username and difficulty fields. Then is no validation error occurs, it will create
+     * a new Player and call changeToGame method to switch screen to game.
+     * @param settings method takes settingView  as argument to have access to Textfields.
+     * @throws Exception 
+     */
     public void startGame(SettingsView settings) throws Exception {
         TextField userField = settings.getUserField();
         Label errorField = settings.getErrorField();

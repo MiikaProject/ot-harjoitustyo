@@ -11,6 +11,10 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * PlayerDao handles database operations with the Player model. It uses the ORMLite ORM extension.
+ * 
+ */
 public class PlayerDao {
 
     Dao<Player, Long> playerDao;
@@ -29,11 +33,21 @@ public class PlayerDao {
         }
 
     }
-
+    
+    /**
+     * Adds Player to database
+     * @param player to be added to database
+     * @throws Exception if database operation fails
+     */
     public void create(Player player) throws Exception {
         playerDao.create(player);
     }
 
+    /**
+     * Gets all players from the database.
+     * @return returns list of players
+     * @throws Exception if database operation fails.
+     */
     public List<Player> getAll() throws Exception {
         ArrayList<Player> players = (ArrayList) playerDao.queryForAll();
         return players;

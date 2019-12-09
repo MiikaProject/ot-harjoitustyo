@@ -13,8 +13,12 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
 
-//The main view of the GameWindow, it holds other smaller views such as
-// GameDisplay, GroceryList,OptionsPanel
+
+
+/**
+ * The main view of the GameWindow, it holds other smaller views such as
+ * GameDisplay, GroceryList,OptionsPanel.
+ */
 public class GameView {
 
     private Player player;
@@ -25,7 +29,7 @@ public class GameView {
     private GroceryListView listItems;
     private TimeLeftView timeleft;
 
-    //Build view
+    
     public GameView(Player player, Stage window) throws Exception {
         this.player = player;
         this.window = window;
@@ -96,31 +100,60 @@ public class GameView {
 
         animation.start();
     }
-
+    
+    /**
+     * Method returns the view.
+     * 
+     */
     public Scene getView() {
         return game;
     }
-
+    
+    /**
+     * Method returns the Animation which provides the view the refresh ticks. Gives access
+     * to the animation for gamecontroller.
+     * @return Animation returns the Animation which provides the view the refresh ticks
+     */
     public AnimationTimer getAnimation() {
         return animation;
     }
 
+    /**
+     * Method returns the GameDisplay object which contains the actual game.
+     * @return returns the GameField containing the actual game.
+     */
     public GameDisplay getGamefield() {
         return gamefield;
     }
 
+    /**
+     * Method returns the GroceryListView part of the GameView.
+     * @return gives access to the GroceryListView.
+     */
     public GroceryListView getListItems() {
         return listItems;
     }
-
+    
+    /**
+     * Method returns the Stage window.
+     * @return returns the window in which the application runs.
+     */
     public Stage getWindow() {
         return window;
     }
-
+    
+    /**
+     * Method returns the Player. 
+     * @return returns the current Player.
+     */
     public Player getPlayer() {
         return player;
     }
 
+    /**
+     * Method returns the time left counter
+     * @return returns TimeLeftView.
+     */
     public TimeLeftView getTimeleft() {
         return timeleft;
     }

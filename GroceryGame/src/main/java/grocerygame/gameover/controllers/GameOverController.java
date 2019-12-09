@@ -9,7 +9,10 @@ import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 
-//Controller to handle action that happen after game ends
+/**
+ * GameOverController controls UI actions in the GameOverView.
+ * 
+ */
 public class GameOverController {
 
     private GameOverView gameover;
@@ -23,19 +26,31 @@ public class GameOverController {
         saveScore();
     }
 
-    //method to return back to primaryview
+    
+    
+    /**
+     * Method to return back to primaryview
+     * 
+     */
     public void changeToPrimaryView() throws Exception {
         PrimaryView primaryview = new PrimaryView(window);
         window.setScene(primaryview.getView());
         window.show();
     }
 
-    //Exit game
+    /**
+     * Method to exit application.
+     * 
+     */
     public void exitGame(ActionEvent event) {
         Platform.exit();
     }
 
-    //Add player and score to database
+    /**
+     * Method to calculate Players score and then add 
+     * Player and score to the database.
+     * 
+     */
     public void saveScore() throws Exception {
         PlayerDao playerdao = new PlayerDao();
         player.calculateFinalScore();

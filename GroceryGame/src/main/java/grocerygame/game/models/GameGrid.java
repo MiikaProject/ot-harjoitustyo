@@ -1,9 +1,12 @@
 package grocerygame.game.models;
 
-// GameGrid holds the location of different objects in the game and 
-//handles most updating object properties
 import grocerygame.primaryview.models.Player;
 
+/**
+ * GameGrid holds the location of different objects in the game and 
+ * handles updating object properties
+ * 
+ */
 public class GameGrid {
 
     public Cell[][] grid;
@@ -34,19 +37,35 @@ public class GameGrid {
         levelOne();
 
     }
-
+    
+    /**
+     * Method sets cell into location in the grid.
+     * @param cell to be added to the grid.
+     */
     public void addCell(Cell cell) {
         grid[cell.getY()][cell.getX()] = cell;
     }
-
+    
+    /**
+     * Method returns the Location of the shopper.
+     * @return Location which keeps track of the location of the shopper
+     */
     public Location getShopper() {
         return shopper;
     }
-
+    
+    /**
+     * Returns the cell at y,x coordinates in the grid. 
+     */
     public Cell getCell(int y, int x) {
         return grid[y][x];
     }
 
+    /**
+     * Method which moves down player. First it check if movement would cause player to move
+     * out of the grid or inside a shelf. Then it moves player. If player moves against
+     * shelf the method calls interactwithcell method which handles interaction with shelf.
+     */
     public void moveDownShopper() {
         if (shopper.getY() + 1 < grid.length && !cellIsShelf(shopper.getY() + 1, shopper.getX())) {
             grid[shopper.getY()][shopper.getX()].setCellType("O");
@@ -58,6 +77,11 @@ public class GameGrid {
 
     }
 
+    /**
+     * Method which moves up player. First it check if movement would cause player to move
+     * out of the grid or inside a shelf. Then it moves player. If player moves against
+     * shelf the method calls interactwithcell method which handles interaction with shelf.
+     */
     public void moveUpShopper() {
         if (shopper.getY() > 0 && !cellIsShelf(shopper.getY() - 1, shopper.getX())) {
             grid[shopper.getY()][shopper.getX()].setCellType("O");
@@ -68,7 +92,12 @@ public class GameGrid {
         }
 
     }
-
+    
+    /**
+     * Method which the player left. First it check if movement would cause player to move
+     * out of the grid or inside a shelf. Then it moves player. If player moves against
+     * shelf the method calls interactwithcell method which handles interaction with shelf.
+     */
     public void moveLeftShopper() {
         if (shopper.getX() > 0 && !cellIsShelf(shopper.getY(), shopper.getX() - 1)) {
             grid[shopper.getY()][shopper.getX()].setCellType("O");
@@ -79,7 +108,12 @@ public class GameGrid {
         }
 
     }
-
+    
+    /**
+     * Method which the player right. First it check if movement would cause player to move
+     * out of the grid or inside a shelf. Then it moves player. If player moves against
+     * shelf the method calls interactwithcell method which handles interaction with shelf.
+     */
     public void moveRightShopper() {
 
         if (shopper.getX() + 1 < grid[0].length && !cellIsShelf(shopper.getY(), shopper.getX() + 1)) {
@@ -91,7 +125,11 @@ public class GameGrid {
         }
 
     }
-
+    
+    
+    /**
+     * Method creates the "shop" into the grid.
+     */
     public void levelOne() {
         for (int i = 5; i < 15; i++) {
             grid[0][i].setCellType("M");
@@ -131,7 +169,11 @@ public class GameGrid {
         }
     }
 
-    //Checks if cell contains shelf and handles interaction between cell and player
+    /**
+     * Method handles interaction between player and shelf/cashier. If grocery from the shelf is 
+     * on the grocerylist it removes it. It also updates players score when picking up a item.
+     * if grocerylist is empty and player moves into the cashier the game ends.
+     */
     private void interactWithCell(int y, int x) {
 
         if (cellIsShelf(y, x)) {
@@ -156,7 +198,10 @@ public class GameGrid {
         }
 
     }
-
+    
+    /**
+     * Method check if there is shelf at parameter x and y location. Returns true/false.
+     */
     private boolean cellIsShelf(int y, int x) {
         if (grid[y][x].getType().equals("M") | grid[y][x].getType().equals("P") | grid[y][x].getType().equals("L") | grid[y][x].getType().equals("F") | grid[y][x].getType().equals("R") | grid[y][x].getType().equals("B")
                 | grid[y][x].getType().equals("C") | grid[y][x].getType().equals("E") | grid[y][x].getType().equals("V") | grid[y][x].getType().equals("D") | grid[y][x].getType().equals("ME")
@@ -167,6 +212,10 @@ public class GameGrid {
         }
     }
 
+    /**
+     * Method which returns the boolean gameover
+     * @return boolean gameover
+     */
     public boolean gameover() {
         return gameover;
     }

@@ -9,12 +9,16 @@ import grocerygame.gameover.views.GameOverView;
 import grocerygame.primaryview.views.PrimaryView;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.scene.Node;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
-//Gamecontroller handles events that happen in the GameView View
+//
+
+/**
+ * Gamecontroller handles events that happen in the GameView View
+ * 
+ */
 public class GameController {
 
     private GameGrid gamegrid;
@@ -35,7 +39,11 @@ public class GameController {
         this.timeleft = gameview.getTimeleft();
 
     }
-
+    
+    /**
+     * Method handles keyEvents in the game.
+     * 
+     */
     public void handleKeyPress(KeyEvent event) {
 
         KeyCode key = event.getCode();
@@ -50,7 +58,11 @@ public class GameController {
         }
 
     }
-
+    
+    /**
+     * Method updates the gameview. 
+     * @param timeSpendInGame is used to calculate time remaining
+     */
     public void refreshView(long timeSpendInGame) throws Exception {
         if (gamegrid.gameover() == true) {
             changeToGameOver();
@@ -67,21 +79,31 @@ public class GameController {
 
     }
 
-    //method to return back to primaryview
+   
+    /**
+     * Method to return back to primaryview after clicking return
+     */
     public void changeToPrimaryView(ActionEvent event) throws Exception {
 
         PrimaryView primaryview = new PrimaryView(window);
         window.setScene(primaryview.getView());
         window.show();
     }
-
+    
+    /**
+     * Method to change to gameOverView after game ends.
+     */
     public void changeToGameOver() throws Exception {
         GameOverView gameoverview = new GameOverView(window, gameview.getPlayer());
         gameview.getAnimation().stop();
         window.setScene(gameoverview.getView());
 
     }
-
+    
+    /**
+     * Method to exit game.
+     * @param event 
+     */
     public void exitGame(ActionEvent event) {
         Platform.exit();
     }

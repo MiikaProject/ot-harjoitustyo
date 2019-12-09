@@ -6,7 +6,12 @@ import java.util.logging.Logger;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 
-//Options panel shows buttons for quitting game and returning to main page
+
+
+/**
+ * Options panel shows buttons for quitting game and returning to main page
+ * 
+ */
 public class OptionsPanel {
 
     HBox options;
@@ -25,18 +30,34 @@ public class OptionsPanel {
 
     }
 
+    /**
+     * Method returns the option panel as HBox
+     * 
+     */
     public HBox getOptions() {
         return options;
     }
-
+    
+    /**
+     * Method returns quit-button in the option panel.
+     * 
+     */
     public Button getQuit() {
         return quit;
     }
-
+    
+    /**
+     * Method returns exit-button in the option panel.
+     * 
+     */
     public Button getExit() {
         return quit;
     }
-
+    
+    /**
+     * Method sets optionpanel a gamecontroller.
+     * @param controller parameter is gamecontroller.
+     */
     public void setController(GameController controller) {
         this.gamecontroller = controller;
         quit.setOnAction(event -> {

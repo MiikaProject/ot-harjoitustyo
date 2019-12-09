@@ -25,6 +25,10 @@ public class Score {
         this.difficulty = difficulty;
     }
 
+    /**
+     * Returns the score at the end of the game. 
+     * @return int score, the score at the end of the game. 
+     */
     public int calculateScore() {
         if (cashier == true) {
             return (int) (timeRemaining / 1000) * difficulty + (items * 50) + 100;
@@ -32,19 +36,37 @@ public class Score {
             return (int) (timeRemaining / 1000) * difficulty + (items * 50);
         }
     }
-
+    
+    /**
+     * Method updates timeremaining in the game based on timespent already in game
+     * @param timeSpent method parameter is long time spent so far in the game
+     */
     public void updateTime(long timeSpent) {
         this.timeRemaining = this.timeTotal - timeSpent;
     }
-
+    
+    /**
+     * Method increments items collected in game. Method is called after a item is
+     * removed from grocerylist.
+     */
     public void addItem() {
         this.items++;
     }
-
+    
+    
+    /**
+     * Method switches boolean cashier to true. Method is called after
+     * player reaches cashier. Cashier true gives player extra points at the end
+     * of the game.
+     */
     public void addCashier() {
         this.cashier = true;
     }
-
+    
+    /**
+     * Method returns true if game time has ended and false if there is still time left.
+     * @return returns boolean timeremaning < 0
+     */
     public boolean timeOver() {
         return timeRemaining < 0;
     }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grocerygame.game.views;
 
 import grocerygame.game.models.Grocery;
@@ -10,7 +5,11 @@ import grocerygame.game.models.GroceryList;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
-//View that renders the shopping list
+
+/**
+ * GroceryListView renders the shopping list
+ *
+ */
 public class GroceryListView {
 
     private GroceryList grocerylist;
@@ -21,7 +20,10 @@ public class GroceryListView {
         list = new VBox();
         createView();
     }
-
+    
+    /**
+     * Method updates the displayed grocerylist to match the inner status of the grocerylist. 
+     */
     public void createView() {
         list.getChildren().clear();
 
@@ -38,6 +40,10 @@ public class GroceryListView {
 
     }
 
+    /**
+     * Method returns the view as VBox
+     * 
+     */
     public VBox getView() {
         return this.list;
     }

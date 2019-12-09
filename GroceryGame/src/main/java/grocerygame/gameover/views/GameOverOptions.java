@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grocerygame.gameover.views;
 
 import grocerygame.gameover.controllers.GameOverController;
@@ -12,8 +7,14 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-//OptionsPanel for game end. Buttons for returning to main page and exiting
-// game.
+
+ 
+
+/**
+ * OptionsPanel for game end. Buttons for returning to main page and exiting
+ * game.
+ * @author miika1
+ */
 public class GameOverOptions {
 
     HBox options;
@@ -33,19 +34,34 @@ public class GameOverOptions {
         options.setFocusTraversable(true);
 
     }
-
+    
+    /**
+     * Method returns the optionPanel.
+     * @return returns the optionpanel as HBox
+     */
     public HBox getOptions() {
         return options;
     }
-
+    /**
+     * Method gives access to other objects to the quit-button in the options.
+     * @return returns the quit-button in the optionPanel
+     */
     public Button getQuit() {
         return quit;
     }
-
+    
+    /**
+     * Method gives access to other objects to the exit-button in the options.
+     * @return returns the exit-button in the optionPanel
+     */
     public Button getExit() {
         return quit;
     }
-
+    
+    /**
+     * Method sets controller for the option panel.
+     * @param controller parameter controller is a gameovercontroller
+     */
     public void setController(GameOverController controller) {
         this.gameovercontroller = controller;
 

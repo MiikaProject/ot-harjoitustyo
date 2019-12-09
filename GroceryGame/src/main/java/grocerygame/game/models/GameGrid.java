@@ -70,7 +70,7 @@ public class GameGrid {
      * which handles interaction with shelf.
      */
     public void moveDownShopper() {
-        if(shopper.getY() + 1 >= grid.length){
+        if (shopper.getY() + 1 >= grid.length) {
             return;
         }
         if (!cellIsShelf(shopper.getY() + 1, shopper.getX())) {
@@ -90,7 +90,7 @@ public class GameGrid {
      * which handles interaction with shelf.
      */
     public void moveUpShopper() {
-        if(shopper.getY() <= 0){
+        if (shopper.getY() <= 0) {
             return;
         }
         if (!cellIsShelf(shopper.getY() - 1, shopper.getX())) {

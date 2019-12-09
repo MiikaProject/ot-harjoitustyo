@@ -5,6 +5,7 @@
  */
 package grocerygame.primaryview;
 
+import grocerygame.primaryview.models.Score;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,29 +18,71 @@ import static org.junit.Assert.*;
  * @author miika1
  */
 public class ScoreTest {
-    
+    private Score score;
     public ScoreTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
+
     @Before
     public void setUp() {
+        score = new Score(1);
     }
     
     @After
     public void tearDown() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void startingScoreIsTimeTimesDifficulty(){
+        assertEquals(30, score.calculateScore());
+        score.setDifficulty(2);
+        assertEquals(60, score.calculateScore());
+        score.setDifficulty(3);
+        assertEquals(90, score.calculateScore());
+    }
+    
+    @Test
+    public void addItemWorks(){
+        score.addItem();
+        assertEquals(1, score.getItems());
+    }
+    
+    
+    @Test
+    public void CashierInitsFalse(){
+        assertEquals(false, score.isCashier());
+    }
+    
+    @Test
+    public void addCashierWorks(){
+        score.addCashier();
+        assertEquals(true, score.isCashier());
+    }
+    
+    @Test
+    public void initiallyTimeRemainingIsTimeTotal(){
+        assertEquals(score.getTimeTotal(), score.getTimeRemaining());
+    }
+    
+    @Test 
+    public void timeSpentWorks(){
+        long timespent = 10000;
+        score.updateTime(timespent);
+        assertEquals(score.getTimeTotal()-timespent, score.getTimeRemaining());
+    }
+    
+    
+    @Test
+    public void TimeRemainingWontGoNegative(){
+        long timeremoved=score.getTimeTotal()*2;
+        score.updateTime(timeremoved);
+        assertEquals(0, score.getTimeRemaining());
+    }
+    
+    @Test
+    public void TimeEndsGameEnds(){
+        long timeremoved=score.getTimeTotal()*2;
+        score.updateTime(timeremoved);
+        assertEquals(true, score.timeOver());
+    }
 }

@@ -6,14 +6,9 @@
 package grocerygame.primaryview;
 
 import grocerygame.primaryview.models.Player;
-import com.sun.org.apache.xerces.internal.impl.dv.xs.DateTimeDV;
-import java.sql.JDBCType;
-import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -48,13 +43,5 @@ public class PlayerTest {
         assertEquals(1, player.getDifficulty());
     }
 
-    @Test
-    public void getTime() {
-
-        long erotus = ZonedDateTime.now().toEpochSecond() - player.getTime().toEpochSecond();
-        boolean arvo = (erotus < 100);
-        assertEquals(true, arvo);
-
-    }
 
 }

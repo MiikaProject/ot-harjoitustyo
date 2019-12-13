@@ -1,8 +1,8 @@
 # Käyttöohje
-Siirry hakemistossa GroceryGame juureen.
+Lataa viimeisin release [release](https://github.com/MiikaProject/ot-harjoitustyo/releases/download/1.0/GroceryGame.jar)
 
 ## Ohjelman käynnistäminen
-Ohjelma käynnistetään lataamalla projekti IDE ja suorittamalla se sitä kautta tai komentoriviltä komennolla "mvn compile exec:java -Dexec.mainClass=grocerygame.Main". Vaatimuksena komentoriviltä suorittamiseen on Mavenin asentaminen komentoriviltä suoritettavaksi.
+Ohjelma käynnistetään joko clickaamalla ladatun ohjelman kuvaketta tai komentoriviltä komennolla java -jar GroceryGame.jar
 
 ## Pelin aloittaminen
 ![alkuvalikko](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/kuvat/alkuvalikko.png)
@@ -19,6 +19,7 @@ Pelin tarkoituksena on kerätä 30 sekunnissa mahdollisimman monta esinettä oik
 
 ## Pelin loppu
 ![loppunäkymä](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/kuvat/loppunakyma.png)
+Pelin lopuksi näät kuinka monta pistettä sait. Voit aloittaa uuden pelin pelaamalla "Return" näppäimellä päävalikkoon. Voit myös poistua pelistä painamalla "Quit".
 
 
 

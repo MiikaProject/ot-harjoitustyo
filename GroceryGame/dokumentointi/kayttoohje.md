@@ -19,6 +19,7 @@ Pelin tarkoituksena on kerätä 30 sekunnissa mahdollisimman monta esinettä oik
 
 ## Pelin loppu
 ![loppunäkymä](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/kuvat/loppunakyma.png)
+
 Pelin lopuksi näät kuinka monta pistettä sait. Voit aloittaa uuden pelin pelaamalla "Return" näppäimellä päävalikkoon. Voit myös poistua pelistä painamalla "Quit".
 
 

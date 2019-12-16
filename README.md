@@ -6,8 +6,10 @@ Ohjelman tarkoituksena on muodostaa peli, jossa pelaajan tulee ohjata hahmoa kau
 
 ## Dokumentaatio
 * [Vaatimusmäärittely](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/vaatimusmaarittely.md)
-* [Tuntikirjanpito](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/tuntikirjanpito.md)
+* [Käyttöohje](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/kayttoohje.md)
 * [Arkkitehtuuri](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/arkkitehtuuri.md)
+* [Testausdokumentti](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/testausdokumentti.md)
+* [Tuntikirjanpito](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/tuntikirjanpito.md)
 
 ## Releaset
 [viikko 6](https://github.com/MiikaProject/ot-harjoitustyo/releases/download/1.0/GroceryGame.jar)

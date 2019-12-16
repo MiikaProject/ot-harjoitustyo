@@ -27,3 +27,5 @@ Sovellus on peli, jossa pelaaja liikuttaa kaupassa hahmoa keräten ostoslistalla
 ## Jatkokehitysideoita
 * Erilaisia tasoja
 * Käyttöliittymän tekeminen hienommaksi
+* Mahdollisuus online ranking listaan
+* Mahdollisuus pelata kahdella pelaajalla samanaikaisesti

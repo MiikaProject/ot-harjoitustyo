@@ -25,6 +25,8 @@ Jokainen pakkaus sisältää alikansiot vieweille, controllereille ja modeleille
 
 ## Sovelluslogiikka
 
+![luokkakaavio](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/kuvat/luokkakaavioGameGrid.png)
+
 Sovelluksen keskiössä on luokka GameGrid. GameGrid on 20x20 ruudukko. Jokaista ruutua kuvaa luokka Cell. Cell sisältää muuttujan "type", joka kuvaa solun tyyppiä. Oletustyyppi on tyhjä. Solulle voidaan antaa tyypiksi esimerkiksi maitohylly, pakasteallas yms. Ruudukon soluista yksi on tyypiltään "shopper", joka kuvaa pelaajaa. 
 
 GameGrid sisältää metodit moveShopperRight, MoveShopperLeft, MoveShopperUp,MoveShopperDown, joiden avulla voidaan siirtää pelaajaa eri suuntiin. Yksi komento siirtää pelaajaa yhden solun verran haluttuun suuntaan. Tällöin solu, jossa pelaaja oli muutetaan taas tyypiltään tyhjäksi ja solu johon pelaaja siirtyy muutetaan tyypiltään "shopperiksi". 

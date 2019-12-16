@@ -17,3 +17,5 @@
 | 7.12.2019     | 8 | sovelluslogiikkaa, projektin rakenteen korjaamista,tietokannan käyttöönotto |46 |
 | 8.12.2019     | 4 | pistelaskun kehittely, laskuri peliin, tulosten tallennus |50 |
 | 9.12.2019     | 4 | javadoc, testejä |54 |
+| 14.12.2019     | 2 | dokumentaatio |56 |
+| 16.12.2019     | 2 | dokumentaatio |58 |

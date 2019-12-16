@@ -42,3 +42,13 @@ Jos pelaajan ostoslista on tyhjä ja hän yrittää liikkua kassa (cashier) tyyp
 ### Uuden pelaajan luominen ja peliin siirtyminen
 ![kuva pelaajan luomisesta](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/kuvat/sekvenssikaavio.png)
 
+### Pelaajan siirtäminen ruudukolla
+
+![sekvenssikaavio](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/kuvat/Move%20Player.png)
+
+
+### Pelaajan siirtyminen hyllylle ja ostoksen poistaminen ostoslistalta
+
+![sekvenssikaavio](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/kuvat/Move%20Player%20to%20Shelf.png)
+
+

@@ -24,7 +24,17 @@ GameGrid luokka on riippuvainen luokista Player, Location, GroceryList, joten se
 ## Järjestelmätestaus
 ![jarjestelmatestikva](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/kuvat/testikattavuus/jarjestelmatesti.jpg)
 
-Järjestelmätason testaaminen tehtiin luomalla peliskenaario testissä "GameTest". Alussa pelaajan ostoslistalla on esineet "Chocolate", "Chicken", "Soap" (huom! kuva virheellinen tässä mielessä). Testin ensmmäisessä vaiheessa siirretään pelaaja pisteeseen yksi, jolloin ostoslistalta tulisi poistua suklaa. Toisessa vaiheessa pelaaja siirretään samaa reittiä pitkin kohtaan 2, jolloin kanan tulisi poistua ostoslistalta. Kolmannessa vaiheessa pelaaja jatkaa matkaa kodintavarat hyllylle ja saippua poistuu ostoslistalta. Viimeisessä vaiheessa pelaaja siirtyy kassalle ja testataan, että peli loppui. Kaikissa eri osuuksissa testataan, että pelaajan pistemäärä on siihen mennessä tapahtuneeseen suoritukseen nähden oikea. 
+Järjestelmätason testaaminen tehtiin luomalla peliskenaario testissä "GameTest". Alussa pelaajan ostoslistalla on esineet "Chocolate", "Chicken", "Soap" (huom! kuva virheellinen tässä mielessä). 
+
+Testin ensmmäisessä vaiheessa siirretään pelaaja pisteeseen yksi, jolloin ostoslistalta tulisi poistua suklaa. 
+
+Toisessa vaiheessa pelaaja siirretään samaa reittiä pitkin kohtaan 2, jolloin kanan tulisi poistua ostoslistalta. 
+
+Kolmannessa vaiheessa pelaaja jatkaa matkaa kodintavarat hyllylle ja saippua poistuu ostoslistalta. 
+
+Viimeisessä vaiheessa pelaaja siirtyy kassalle ja testataan, että peli loppui. 
+
+Kaikissa eri osuuksissa testataan, että pelaajan pistemäärä on siihen mennessä tapahtuneeseen suoritukseen nähden oikea. 
 
 
 ## Testien puutteet

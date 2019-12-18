@@ -79,5 +79,7 @@ public class PlayerDao {
     public void ClearDatabase() throws Exception {
         TableUtils.clearTable(connectionSource, Player.class);
     }
+    
+    
 
 }

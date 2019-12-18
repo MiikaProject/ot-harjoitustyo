@@ -40,6 +40,7 @@ public class PlayerDaoTest {
     @After
     public void tearDown() throws Exception {
         playerDao.ClearDatabase();
+        
     }
 
     @Test

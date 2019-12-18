@@ -30,9 +30,19 @@ public class Score {
      */
     public int calculateScore() {
         if (cashier == true) {
-            return (int) (timeRemaining / 1000) * difficulty + (items * 50) + 100;
+            if (timeRemaining == timeTotal) {
+                return (items * 50) + 100;
+            } else {
+                return (int) (timeRemaining / 1000) * difficulty + (items * 50) + 100;
+            }
+
         } else {
-            return (int) (timeRemaining / 1000) * difficulty + (items * 50);
+            if (timeRemaining == timeTotal) {
+                return items * 50;
+            } else {
+                return (int) (timeRemaining / 1000) * difficulty + (items * 50);
+            }
+
         }
     }
 

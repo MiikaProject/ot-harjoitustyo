@@ -23,7 +23,6 @@ public class PlayerTest {
     public PlayerTest() {
     }
 
-
     @Before
     public void setUp() {
         player = new Player("Pelaaja", 1);
@@ -43,5 +42,13 @@ public class PlayerTest {
         assertEquals(1, player.getDifficulty());
     }
 
+    @Test
+    public void setDifficulty() {
+        for (int i = 1; i < 3; i++) {
+            player.setDifficulty(i);
+            assertEquals(i, player.getDifficulty());
+        }
+
+    }
 
 }

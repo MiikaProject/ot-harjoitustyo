@@ -33,12 +33,12 @@ public class ScoreTest {
     }
 
     @Test
-    public void startingScoreIsTimeTimesDifficulty(){
-        assertEquals(30, score.calculateScore());
+    public void startingScoreIsZero(){
+        assertEquals(0, score.calculateScore());
         score.setDifficulty(2);
-        assertEquals(60, score.calculateScore());
+        assertEquals(0, score.calculateScore());
         score.setDifficulty(3);
-        assertEquals(90, score.calculateScore());
+        assertEquals(0, score.calculateScore());
     }
     
     @Test
@@ -84,5 +84,11 @@ public class ScoreTest {
         long timeremoved=score.getTimeTotal()*2;
         score.updateTime(timeremoved);
         assertEquals(true, score.timeOver());
+    }
+    
+    @Test
+    public void WhenTimeLeftGameOverIsFalse(){
+        score.updateTime((score.getTimeTotal()/3));
+        assertEquals(false, score.timeOver());
     }
 }

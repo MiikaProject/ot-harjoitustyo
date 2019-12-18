@@ -38,14 +38,6 @@ public class GameGrid {
 
     }
 
-    /**
-     * Method sets cell into location in the grid.
-     *
-     * @param cell to be added to the grid.
-     */
-    public void addCell(Cell cell) {
-        grid[cell.getY()][cell.getX()] = cell;
-    }
 
     /**
      * Method returns the Location of the shopper.

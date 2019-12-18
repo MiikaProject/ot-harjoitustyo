@@ -1,6 +1,5 @@
 package grocerygame.primaryview.models;
 
-import java.time.ZonedDateTime;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
@@ -30,13 +29,6 @@ public class Player implements Comparable<Player> {
     }
 
     public Player(String name, int difficulty) {
-        this.name = name;
-        this.difficulty = difficulty;
-        this.score = new Score(difficulty);
-        this.finalScore = 0;
-    }
-
-    public Player(String name, int difficulty, int score) {
         this.name = name;
         this.difficulty = difficulty;
         this.score = new Score(difficulty);
@@ -76,6 +68,15 @@ public class Player implements Comparable<Player> {
     public void calculateFinalScore() {
         this.finalScore = getScore().calculateScore();
     }
+    
+    /**
+     * Method to set difficulty for players game
+     * @param difficulty to be set
+     */
+    public void setDifficulty(int difficulty){
+        this.difficulty=difficulty;
+        score.setDifficulty(difficulty);
+    }
 
     /**
      * ToString method, format name, difficulty, score. 
@@ -93,7 +94,14 @@ public class Player implements Comparable<Player> {
      */
     @Override
     public int compareTo(Player player) {
-        return player.getFinalScore() - this.finalScore;
+        if(player.getFinalScore()>this.finalScore){
+            return 1;
+        } else if(player.getFinalScore()==this.finalScore){
+            return 0;
+        } else {
+            return -1;
+        }
+        
     }
 
 /**
@@ -102,6 +110,28 @@ public class Player implements Comparable<Player> {
  */
     public int getFinalScore() {
         return finalScore;
+    }
+    
+    /**
+     * Adds item to player's score
+     */
+    public void addItemToScore(){
+       score.addItem();
+    }
+    
+    /**
+     * Method to add cashier to player's score
+     */
+    public void addCashier(){
+        score.addCashier();
+    }
+    
+    /**
+     * Method for updatig timeremaining in Score
+     * @param time removed from total time
+     */
+    public void spendTime(long time){
+        score.updateTime(time);
     }
 
 }

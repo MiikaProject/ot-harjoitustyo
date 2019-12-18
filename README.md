@@ -12,7 +12,7 @@ Ohjelman tarkoituksena on muodostaa peli, jossa pelaajan tulee ohjata hahmoa kau
 * [Tuntikirjanpito](https://github.com/MiikaProject/ot-harjoitustyo/blob/master/GroceryGame/dokumentointi/tuntikirjanpito.md)
 
 ## Releaset
-[Loppupalautus](https://github.com/MiikaProject/ot-harjoitustyo/releases/download/1.0/GroceryGame.jar)
+[Loppupalautus](https://github.com/MiikaProject/ot-harjoitustyo/releases/download/2.0/GroceryGame.jar)
 
 ## Komentorivi komennot
 Ennen komentorivien suorittamista tulee siirtyä Maven-projektin juureen eli ot-harjoitustyo/Grocerygame

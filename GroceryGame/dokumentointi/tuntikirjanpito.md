@@ -19,3 +19,4 @@
 | 9.12.2019     | 4 | javadoc, testejä |54 |
 | 14.12.2019     | 2 | dokumentaatio |56 |
 | 16.12.2019     | 2 | dokumentaatio |58 |
+| 18.12.2019     | 5 | dokumentaatio |63 |

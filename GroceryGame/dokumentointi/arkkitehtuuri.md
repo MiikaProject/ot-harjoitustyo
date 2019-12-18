@@ -36,6 +36,11 @@ Ennen liikkumista tiettyyn suuntaan tarkistetaan, että ruutu johon halutaan lii
 GameGrid sisältää luokan GroceryList. GroceryList luokka sisältää listan ostoksia, joita kuvaa luokka Grocery. Jokaisella ostoksella on nimi ja kategoria (esim. maitotuote, liha, pakaste). InteractWithCell tarkistaa onko pelaajan ostoslistalla esine, joka kuuluu kyseiseen hyllyyn ja poistaa sen ostoslistalta.
 
 Jos pelaajan ostoslista on tyhjä ja hän yrittää liikkua kassa (cashier) tyyppiseen soluun, peli loppuu.
+
+## Tietojen tallennus
+
+Sovellus tallettaa pelin jälkeen pelaajien tulokset tietokantaan. Tietokanta on toteutettu käyttäen ORMLite-kirjastoa, joka huolehtii luokan Player muutosta tietokanta-modeliksi ja sen tallettamisesta tietokantaa. Sovelluksessa tietokantaoperaatioista huolehtii luokka PlayerDao. Tietokanta sijaitsee tiedostossa grocerygame.db.  Tietokantataulun nimi on "players" ja sarakkeet ovat "name", "difficulty", "score". PlayerDao luokan testit luovat testitietokannan nimeltä databaseTest.db. 
+
 ## Päätoiminnallisuudet
 
 
